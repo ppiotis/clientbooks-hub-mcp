@@ -1,0 +1,42 @@
+{
+  "ManualJournals": [
+    {
+      "ManualJournalID": "m0000-0000-4000-9000-000000000071",
+      "Date": "/Date(1785456000000+0000)/",
+      "DateString": "2026-07-31T00:00:00",
+      "Status": "DRAFT",
+      "Narration": "July accruals (never posted)",
+      "LineAmountTypes": "NoTax",
+      "JournalLines": [
+        {
+          "AccountCode": "469",
+          "LineAmount": 500,
+          "Description": "Accrue rent top-up"
+        },
+        {
+          "AccountCode": "825",
+          "LineAmount": -500,
+          "Description": "Accrue rent top-up"
+        }
+      ]
+    },
+    {
+      "ManualJournalID": "m0000-0000-4000-9000-000000000072",
+      "Date": "/Date(1782777600000+0000)/",
+      "DateString": "2026-06-30T00:00:00",
+      "Status": "POSTED",
+      "Narration": "EOFY depreciation",
+      "LineAmountTypes": "NoTax",
+      "JournalLines": [
+        {
+          "AccountCode": "473",
+          "LineAmount": 1200
+        },
+        {
+          "AccountCode": "960",
+          "LineAmount": -1200
+        }
+      ]
+    }
+  ]
+}

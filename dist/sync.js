@@ -63,13 +63,15 @@ export async function fetchOrg(src, tenantId, asOf) {
 export class Cache {
     src;
     defaultAsOf;
+    beforeSync;
     orgs = new Map();
     lastSync;
     running;
     timer;
-    constructor(src, defaultAsOf) {
+    constructor(src, defaultAsOf, beforeSync) {
         this.src = src;
         this.defaultAsOf = defaultAsOf;
+        this.beforeSync = beforeSync;
     }
     asOf(override) { return override ?? this.defaultAsOf ?? todayIso(); }
     sync(asOf) {
@@ -78,6 +80,8 @@ export class Cache {
         return this.running;
     }
     async doSync(asOf) {
+        if (this.beforeSync)
+            await this.beforeSync();
         const tenants = await this.src.tenants();
         const res = { syncedAt: new Date().toISOString(), asOf, orgs: [] };
         const seen = new Set();

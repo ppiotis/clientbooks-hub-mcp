@@ -18,3 +18,5 @@ Caveats to mention when relevant:
 - "Unreconciled" means Xero bank transactions not yet reconciled. Statement lines that have not been imported or coded are not visible through Xero's API, so the accountant should still glance at the Xero reconcile screen.
 - The file contains client financial data. It is written only to the configured export folder, and the user is responsible for sharing it securely.
 - One pack per client per call. For several clients, call once per client.
+
+For several clients at once, or for draft variance commentary, exception lists and AR/AP/cash snapshots, use `month_end_summary` (with `orgs` omitted for the whole book, and `export: true` for one practice workbook). The commentary is a draft for the accountant to edit.

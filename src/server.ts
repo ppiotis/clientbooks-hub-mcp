@@ -5,8 +5,9 @@ import { getContext, type Context } from "./context.js";
 import { health, overdueAcross, payrollRisk, practiceDashboard, trendingTrouble } from "./analytics.js";
 import { writePack } from "./xlsx.js";
 import type { OrgSnapshot } from "./normalize.js";
+import { registerPracticeTools } from "./practice.js";
 
-export const VERSION = "1.1.0";
+export const VERSION = "1.2.0";
 
 const RO = { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: true } as const;
 const asOf = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Use YYYY-MM-DD").optional().describe("Report date (YYYY-MM-DD). Defaults to today (demo mode: 2026-09-30).");
@@ -27,13 +28,13 @@ export function createServer(c: Context = getContext()): McpServer {
 
   server.registerTool("connect_org_start", {
     title: "Start connecting a client's Xero org",
-    description: "Creates a Xero OAuth2 (authorization code + PKCE) sign-in link with READ-ONLY scopes. Give the link to the client (or open it yourself if you are their adviser user); they pick their org and approve. Then call connect_org_complete with the URL they were redirected to. Not needed in demo mode.",
+    description: "Creates a Xero OAuth2 (authorization code + PKCE) sign-in link with READ-ONLY scopes (plus the manual-journals write scope only if XERO_AGG_ENABLE_WRITES=1). One practice login can tick many orgs on Xero's consent screen; all of them are stored under one grant and used in the same session without re-authenticating. Give the link to the client (or open it yourself if you are their adviser user); they pick their org and approve. Then call connect_org_complete with the URL they were redirected to. Not needed in demo mode.",
     inputSchema: {},
     annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: false, openWorldHint: false },
   }, safe(async () => {
-    if (cfg.demo) return { mode: "demo", message: "Demo mode: two fixture orgs (Harbour Bakery Ltd, Northwind Joinery Ltd) are already connected. Unset XERO_AGG_DEMO to connect real orgs." };
+    if (cfg.demo) return { mode: "demo", message: "Demo mode: three sample orgs (Harbour Bakery Ltd, Kookaburra Coffee Co Pty Ltd, Northwind Joinery Ltd) are already connected. Unset XERO_AGG_DEMO to connect real orgs." };
     const s = oauth.start();
-    return { ...s, scopes: cfg.scopes, redirect_uri: cfg.redirectUri, next_step: "Ask the user to open authorize_url, approve, then paste the full URL of the page they land on into connect_org_complete." };
+    return { ...s, scopes: cfg.scopes, write_back_enabled: cfg.writesEnabled, redirect_uri: cfg.redirectUri, next_step: "Ask the user to open authorize_url, approve, then paste the full URL of the page they land on into connect_org_complete." };
   }));
 
   server.registerTool("connect_org_complete", {
@@ -45,25 +46,28 @@ export function createServer(c: Context = getContext()): McpServer {
     if (cfg.demo) throw new UserError("Demo mode is on; there is nothing to connect.");
     const conn = await oauth.complete({ redirect_url });
     const sync = await cache.sync();
+    c.practice.invalidate();
     return { connected: conn.tenants.map((t) => t.tenantName), scopes: conn.scopes, stored: "OAuth tokens only, AES-256-GCM encrypted", sync };
   }));
 
   server.registerTool("list_orgs", {
     title: "List connected client orgs",
-    description: "Lists every connected Xero org with sync status, currency and counts. Start here.",
-    inputSchema: {},
+    description: "Lists every connected Xero org (tenant id, name, country, currency, sync status, counts, API calls used today). refresh_connections=true re-reads Xero's /connections first to pick up renamed or revoked orgs. Start here; every other tool labels its results with these org names and tenant ids.",
+    inputSchema: { refresh_connections: z.boolean().default(false) },
     annotations: RO,
-  }, safe(async () => {
+  }, safe(async ({ refresh_connections }: { refresh_connections?: boolean }) => {
+    const refreshed = refresh_connections && !cfg.demo ? await c.live.refreshConnections(true) : undefined;
     const tenants = await c.source.tenants();
     if (!cache.lastSync && tenants.length) await cache.sync();
     return {
-      mode: c.source.kind, poll_interval_minutes: cfg.syncMinutes, last_sync: cache.lastSync?.syncedAt ?? null, as_of: cache.lastSync?.asOf ?? null,
+      mode: c.source.kind, poll_interval_minutes: cfg.syncMinutes, scan_interval_minutes: cfg.scanMinutes, write_back_enabled: cfg.writesEnabled,
+      last_sync: cache.lastSync?.syncedAt ?? null, as_of: cache.lastSync?.asOf ?? null, ...(refreshed ? { connections_refresh: refreshed } : {}),
       orgs: tenants.map((t) => {
         const o = cache.orgs.get(t.tenantId);
         const st = cache.lastSync?.orgs.find((x) => x.orgId === t.tenantId);
         return { org_id: t.tenantId, name: t.tenantName, currency: o?.currency ?? null, synced: Boolean(st?.ok), error: st?.error,
           open_invoices: o?.invoices.filter((i) => i.kind === "receivable").length ?? 0, open_bills: o?.invoices.filter((i) => i.kind === "payable").length ?? 0,
-          contacts: o?.contacts ?? 0, bank_accounts: o?.bank.length ?? 0 };
+          contacts: o?.contacts ?? 0, bank_accounts: o?.bank.length ?? 0, ...(c.source.kind === "live" ? { api_usage: c.live.limiter.usage(t.tenantId) } : {}) };
       }),
     };
   }));
@@ -73,7 +77,7 @@ export function createServer(c: Context = getContext()): McpServer {
     description: "Re-fetches invoices, bills, contacts, bank balances and reports for every connected org into the in-memory cache (nothing financial is written to disk). The poller also does this automatically every XERO_AGG_SYNC_MINUTES.",
     inputSchema: { as_of: asOf },
     annotations: RO,
-  }, safe(async ({ as_of }: { as_of?: string }) => cache.sync(as_of)));
+  }, safe(async ({ as_of }: { as_of?: string }) => { c.practice.invalidate(); return cache.sync(as_of); }));
 
   server.registerTool("overdue_invoices", {
     title: "Overdue invoices across all clients",
@@ -158,5 +162,6 @@ export function createServer(c: Context = getContext()): McpServer {
     return { status: "done", org: t.tenantName, ...r };
   }));
 
+  registerPracticeTools(server, c);
   return server;
 }

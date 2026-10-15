@@ -1,14 +1,29 @@
 {
   "name": "clientbooks-hub",
   "displayName": "ClientBooks Hub",
-  "version": "1.1.0",
-  "description": "For accountants and bookkeepers who manage many client orgs; works with Xero. Connect each client read-only, then ask across all of them: overdue invoices 30/60/90+, who is closest to missing payroll, client health scores, practice revenue and DSO, and a ready-to-send Excel month-end pack per client. Tokens are encrypted at rest; financial data is never stored.",
-  "author": { "name": "Paris Piotis", "url": "https://github.com/ppiotis" },
+  "version": "1.2.0",
+  "description": "For accountants and bookkeepers who manage many client orgs; works with Xero. Connect every client under one practice login, then ask across all of them: overdue invoices, payroll risk, client health, practice revenue and DSO, unreconciled lines older than N days, duplicate bills and payments, missing tax codes and GST/VAT anomalies, BAS/VAT and month-close readiness, month-end summaries with draft commentary, and Excel packs. Read-only by default; optional DRAFT-only journals need explicit per-org confirmation. Local audit trail; tokens encrypted at rest.",
+  "author": {
+    "name": "Paris Piotis",
+    "url": "https://github.com/ppiotis"
+  },
   "homepage": "https://github.com/ppiotis/clientbooks-hub-mcp",
   "repository": "https://github.com/ppiotis/clientbooks-hub-mcp",
   "license": "MIT",
   "logo": "logo.svg",
-  "keywords": ["xero", "accounting", "accountants", "practice management", "month-end", "cash flow", "payroll"],
+  "keywords": [
+    "xero",
+    "accounting",
+    "accountants",
+    "practice management",
+    "month-end",
+    "cash flow",
+    "payroll",
+    "bas",
+    "vat",
+    "gst",
+    "reconciliation"
+  ],
   "category": "finance",
   "skills": "./skills/",
   "mcpServers": "./.mcp.json"

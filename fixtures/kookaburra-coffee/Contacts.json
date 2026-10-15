@@ -1,0 +1,49 @@
+{
+  "Contacts": [
+    {
+      "ContactID": "c0000-0000-4000-9000-000000000015",
+      "Name": "Brew Bar Cafe",
+      "ContactStatus": "ACTIVE"
+    },
+    {
+      "ContactID": "c0000-0000-4000-9000-000000000016",
+      "Name": "Laneway Roasters",
+      "ContactStatus": "ACTIVE"
+    },
+    {
+      "ContactID": "c0000-0000-4000-9000-000000000017",
+      "Name": "Harbourside Hotel",
+      "ContactStatus": "ACTIVE"
+    },
+    {
+      "ContactID": "c0000-0000-4000-9000-000000000018",
+      "Name": "Pop-up Events Co",
+      "ContactStatus": "ACTIVE"
+    },
+    {
+      "ContactID": "c0000-0000-4000-9000-000000000019",
+      "Name": "Bean Brokers Pty Ltd",
+      "ContactStatus": "ACTIVE"
+    },
+    {
+      "ContactID": "c0000-0000-4000-9000-000000000020",
+      "Name": "Collins St Property",
+      "ContactStatus": "ACTIVE"
+    },
+    {
+      "ContactID": "c0000-0000-4000-9000-000000000021",
+      "Name": "Telstra",
+      "ContactStatus": "ACTIVE"
+    },
+    {
+      "ContactID": "c0000-0000-4000-9000-000000000022",
+      "Name": "Officeworks",
+      "ContactStatus": "ACTIVE"
+    },
+    {
+      "ContactID": "c0000-0000-4000-9000-000000000023",
+      "Name": "ATO",
+      "ContactStatus": "ACTIVE"
+    }
+  ]
+}

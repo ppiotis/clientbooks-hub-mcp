@@ -1,0 +1,128 @@
+{
+  "Reports": [
+    {
+      "ReportID": "BalanceSheet",
+      "ReportName": "Balance Sheet",
+      "ReportType": "BalanceSheet",
+      "ReportDate": "30 September 2026",
+      "Rows": [
+        {
+          "RowType": "Header",
+          "Cells": [
+            {
+              "Value": ""
+            },
+            {
+              "Value": "Sep 26"
+            },
+            {
+              "Value": "Aug 26"
+            },
+            {
+              "Value": "Jul 26"
+            },
+            {
+              "Value": "Jun 26"
+            },
+            {
+              "Value": "May 26"
+            },
+            {
+              "Value": "Apr 26"
+            }
+          ]
+        },
+        {
+          "RowType": "Section",
+          "Title": "Bank",
+          "Rows": [
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Business Cheque Account"
+                },
+                {
+                  "Value": "12340.55"
+                },
+                {
+                  "Value": "10880.55"
+                },
+                {
+                  "Value": "11200.00"
+                },
+                {
+                  "Value": "9800.00"
+                },
+                {
+                  "Value": "9100.00"
+                },
+                {
+                  "Value": "8700.00"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "RowType": "Section",
+          "Title": "Current Liabilities",
+          "Rows": [
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Director Loan Account"
+                },
+                {
+                  "Value": "3000.00"
+                },
+                {
+                  "Value": "3000.00"
+                },
+                {
+                  "Value": "3000.00"
+                },
+                {
+                  "Value": "3000.00"
+                },
+                {
+                  "Value": "3000.00"
+                },
+                {
+                  "Value": "3000.00"
+                }
+              ]
+            },
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Suspense"
+                },
+                {
+                  "Value": "734.20"
+                },
+                {
+                  "Value": "734.20"
+                },
+                {
+                  "Value": "0.00"
+                },
+                {
+                  "Value": "0.00"
+                },
+                {
+                  "Value": "0.00"
+                },
+                {
+                  "Value": "0.00"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

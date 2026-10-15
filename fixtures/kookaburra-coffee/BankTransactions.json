@@ -1,0 +1,184 @@
+{
+  "BankTransactions": [
+    {
+      "BankTransactionID": "b0000-0000-4000-9000-000000000062",
+      "Type": "SPEND",
+      "Status": "AUTHORISED",
+      "IsReconciled": false,
+      "HasAttachments": false,
+      "Reference": "Card 4471",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-9000-000000000022",
+        "Name": "Officeworks"
+      },
+      "Date": "/Date(1786320000000+0000)/",
+      "DateString": "2026-08-10T00:00:00",
+      "LineAmountTypes": "Exclusive",
+      "LineItems": [
+        {
+          "LineItemID": "l0000-0000-4000-9000-000000000061",
+          "Description": "Espresso grinder",
+          "AccountCode": "461",
+          "LineAmount": 1800,
+          "TaxType": "INPUT",
+          "TaxAmount": 180,
+          "Quantity": 1,
+          "UnitAmount": 1800
+        }
+      ],
+      "SubTotal": 1800,
+      "TotalTax": 180,
+      "Total": 1980,
+      "CurrencyCode": "AUD",
+      "BankAccount": {
+        "AccountID": "ac0000-0000-4000-9000-000000000024",
+        "Code": "090",
+        "Name": "Business Cheque Account"
+      }
+    },
+    {
+      "BankTransactionID": "b0000-0000-4000-9000-000000000064",
+      "Type": "SPEND",
+      "Status": "AUTHORISED",
+      "IsReconciled": false,
+      "HasAttachments": true,
+      "Reference": "",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-9000-000000000022",
+        "Name": "Officeworks"
+      },
+      "Date": "/Date(1790467200000+0000)/",
+      "DateString": "2026-09-27T00:00:00",
+      "LineAmountTypes": "Exclusive",
+      "LineItems": [
+        {
+          "LineItemID": "l0000-0000-4000-9000-000000000063",
+          "Description": "Printer paper",
+          "AccountCode": "461",
+          "LineAmount": 77.27,
+          "TaxType": "INPUT",
+          "TaxAmount": 7.73,
+          "Quantity": 1,
+          "UnitAmount": 77.27
+        }
+      ],
+      "SubTotal": 77.27,
+      "TotalTax": 7.73,
+      "Total": 85,
+      "CurrencyCode": "AUD",
+      "BankAccount": {
+        "AccountID": "ac0000-0000-4000-9000-000000000024",
+        "Code": "090",
+        "Name": "Business Cheque Account"
+      }
+    },
+    {
+      "BankTransactionID": "b0000-0000-4000-9000-000000000066",
+      "Type": "RECEIVE",
+      "Status": "AUTHORISED",
+      "IsReconciled": false,
+      "HasAttachments": false,
+      "Reference": "",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-9000-000000000018",
+        "Name": "Pop-up Events Co"
+      },
+      "Date": "/Date(1789430400000+0000)/",
+      "DateString": "2026-09-15T00:00:00",
+      "LineAmountTypes": "Exclusive",
+      "LineItems": [
+        {
+          "LineItemID": "l0000-0000-4000-9000-000000000065",
+          "Description": "Cash sales, markets",
+          "AccountCode": "200",
+          "LineAmount": 640,
+          "TaxType": "NONE",
+          "TaxAmount": 0,
+          "Quantity": 1,
+          "UnitAmount": 640
+        }
+      ],
+      "SubTotal": 640,
+      "TotalTax": 0,
+      "Total": 640,
+      "CurrencyCode": "AUD",
+      "BankAccount": {
+        "AccountID": "ac0000-0000-4000-9000-000000000024",
+        "Code": "090",
+        "Name": "Business Cheque Account"
+      }
+    },
+    {
+      "BankTransactionID": "b0000-0000-4000-9000-000000000068",
+      "Type": "SPEND",
+      "Status": "AUTHORISED",
+      "IsReconciled": true,
+      "HasAttachments": true,
+      "Reference": "",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-9000-000000000020",
+        "Name": "Collins St Property"
+      },
+      "Date": "/Date(1789689600000+0000)/",
+      "DateString": "2026-09-18T00:00:00",
+      "LineAmountTypes": "Exclusive",
+      "LineItems": [
+        {
+          "LineItemID": "l0000-0000-4000-9000-000000000067",
+          "Description": "Fit-out deposit",
+          "AccountCode": "473",
+          "LineAmount": 2400,
+          "TaxType": "INPUT",
+          "TaxAmount": 240,
+          "Quantity": 1,
+          "UnitAmount": 2400
+        }
+      ],
+      "SubTotal": 2400,
+      "TotalTax": 240,
+      "Total": 2640,
+      "CurrencyCode": "AUD",
+      "BankAccount": {
+        "AccountID": "ac0000-0000-4000-9000-000000000024",
+        "Code": "090",
+        "Name": "Business Cheque Account"
+      }
+    },
+    {
+      "BankTransactionID": "b0000-0000-4000-9000-000000000070",
+      "Type": "SPEND",
+      "Status": "AUTHORISED",
+      "IsReconciled": true,
+      "HasAttachments": false,
+      "Reference": "",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-9000-000000000022",
+        "Name": "Officeworks"
+      },
+      "Date": "/Date(1789862400000+0000)/",
+      "DateString": "2026-09-20T00:00:00",
+      "LineAmountTypes": "Exclusive",
+      "LineItems": [
+        {
+          "LineItemID": "l0000-0000-4000-9000-000000000069",
+          "Description": "Machine service",
+          "AccountCode": "473",
+          "LineAmount": 1200,
+          "TaxType": "INPUT",
+          "TaxAmount": 120,
+          "Quantity": 1,
+          "UnitAmount": 1200
+        }
+      ],
+      "SubTotal": 1200,
+      "TotalTax": 120,
+      "Total": 1320,
+      "CurrencyCode": "AUD",
+      "BankAccount": {
+        "AccountID": "ac0000-0000-4000-9000-000000000024",
+        "Code": "090",
+        "Name": "Business Cheque Account"
+      }
+    }
+  ]
+}

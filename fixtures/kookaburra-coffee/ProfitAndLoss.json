@@ -1,0 +1,268 @@
+{
+  "Reports": [
+    {
+      "ReportID": "ProfitAndLoss",
+      "ReportName": "Profit and Loss",
+      "ReportType": "ProfitAndLoss",
+      "ReportDate": "30 September 2026",
+      "Rows": [
+        {
+          "RowType": "Header",
+          "Cells": [
+            {
+              "Value": ""
+            },
+            {
+              "Value": "Sep 26"
+            },
+            {
+              "Value": "Aug 26"
+            },
+            {
+              "Value": "Jul 26"
+            },
+            {
+              "Value": "Jun 26"
+            },
+            {
+              "Value": "May 26"
+            },
+            {
+              "Value": "Apr 26"
+            }
+          ]
+        },
+        {
+          "RowType": "Section",
+          "Title": "Income",
+          "Rows": [
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Sales",
+                  "Attributes": [
+                    {
+                      "Value": "ac0000-0000-4000-9000-000000000025",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": "18200.00"
+                },
+                {
+                  "Value": "16900.00"
+                },
+                {
+                  "Value": "17400.00"
+                },
+                {
+                  "Value": "16800.00"
+                },
+                {
+                  "Value": "15900.00"
+                },
+                {
+                  "Value": "15200.00"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "RowType": "Section",
+          "Title": "Less Operating Expenses",
+          "Rows": [
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Cost of Goods Sold",
+                  "Attributes": [
+                    {
+                      "Value": "x0000-0000-4000-9000-000000000073",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": "6100.00"
+                },
+                {
+                  "Value": "5600.00"
+                },
+                {
+                  "Value": "5800.00"
+                },
+                {
+                  "Value": "5500.00"
+                },
+                {
+                  "Value": "5300.00"
+                },
+                {
+                  "Value": "5000.00"
+                }
+              ]
+            },
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Rent",
+                  "Attributes": [
+                    {
+                      "Value": "x0000-0000-4000-9000-000000000074",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": "6000.00"
+                },
+                {
+                  "Value": "6000.00"
+                },
+                {
+                  "Value": "6000.00"
+                },
+                {
+                  "Value": "6000.00"
+                },
+                {
+                  "Value": "6000.00"
+                },
+                {
+                  "Value": "6000.00"
+                }
+              ]
+            },
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Wages and Salaries",
+                  "Attributes": [
+                    {
+                      "Value": "x0000-0000-4000-9000-000000000075",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": "5200.00"
+                },
+                {
+                  "Value": "5200.00"
+                },
+                {
+                  "Value": "5200.00"
+                },
+                {
+                  "Value": "5000.00"
+                },
+                {
+                  "Value": "5000.00"
+                },
+                {
+                  "Value": "5000.00"
+                }
+              ]
+            },
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Repairs and Maintenance",
+                  "Attributes": [
+                    {
+                      "Value": "x0000-0000-4000-9000-000000000076",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": "3600.00"
+                },
+                {
+                  "Value": "450.00"
+                },
+                {
+                  "Value": "520.00"
+                },
+                {
+                  "Value": "480.00"
+                },
+                {
+                  "Value": "500.00"
+                },
+                {
+                  "Value": "470.00"
+                }
+              ]
+            },
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Telephone & Internet",
+                  "Attributes": [
+                    {
+                      "Value": "x0000-0000-4000-9000-000000000077",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": "300.00"
+                },
+                {
+                  "Value": "290.00"
+                },
+                {
+                  "Value": "295.00"
+                },
+                {
+                  "Value": "300.00"
+                },
+                {
+                  "Value": "290.00"
+                },
+                {
+                  "Value": "285.00"
+                }
+              ]
+            },
+            {
+              "RowType": "SummaryRow",
+              "Cells": [
+                {
+                  "Value": "Total Operating Expenses"
+                },
+                {
+                  "Value": "21200.00"
+                },
+                {
+                  "Value": "17540.00"
+                },
+                {
+                  "Value": "17815.00"
+                },
+                {
+                  "Value": "17280.00"
+                },
+                {
+                  "Value": "17090.00"
+                },
+                {
+                  "Value": "16755.00"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

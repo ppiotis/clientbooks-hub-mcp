@@ -1,7 +1,7 @@
 {
   "name": "clientbooks-hub-mcp",
-  "version": "1.1.0",
-  "description": "ClientBooks Hub: multi-client MCP server for accountants, works with Xero: read-only OAuth2 (PKCE) per client org, scheduled sync into one cross-org model, overdue invoices, payroll risk, client health scores, practice dashboard and .xlsx month-end packs. Tokens encrypted at rest; financial data in memory only.",
+  "version": "1.2.0",
+  "description": "ClientBooks Hub: multi-client MCP server for accountants, works with Xero. One practice login across many client orgs: cross-client data pulls, exception scans (unreconciled, duplicates, tax codes, variances), BAS/VAT and close readiness, month-end summaries, payroll risk, health scores and .xlsx packs. Read-only by default, opt-in DRAFT journals with two-step confirmation, local audit trail, rate-limited, tokens encrypted at rest.",
   "type": "module",
   "license": "MIT",
   "author": "Paris Piotis",
@@ -18,7 +18,10 @@
     "bookkeeping",
     "month-end",
     "grok-bot",
-    "cursor-plugin"
+    "cursor-plugin",
+    "bas",
+    "vat",
+    "gst"
   ],
   "engines": {
     "node": ">=20"
@@ -42,7 +45,7 @@
     "start:http": "node dist/serve-http.js",
     "test": "npm run build && vitest run",
     "typecheck": "tsc --noEmit",
-    "fixtures": "node fixtures/generate.mjs",
+    "fixtures": "node fixtures/generate.mjs && node fixtures/generate-v12.mjs",
     "test:integration": "npm run build && vitest run test/integration.xero.test.ts"
   },
   "dependencies": {

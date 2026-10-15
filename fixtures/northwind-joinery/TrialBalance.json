@@ -1,0 +1,199 @@
+{
+  "Reports": [
+    {
+      "ReportID": "TrialBalance",
+      "ReportName": "Trial Balance",
+      "ReportType": "TrialBalance",
+      "ReportTitles": [
+        "Trial Balance",
+        "Northwind Joinery Ltd",
+        "As at 30 September 2026"
+      ],
+      "ReportDate": "30 September 2026",
+      "Rows": [
+        {
+          "RowType": "Header",
+          "Cells": [
+            {
+              "Value": "Account"
+            },
+            {
+              "Value": "Debit"
+            },
+            {
+              "Value": "Credit"
+            },
+            {
+              "Value": "YTD Debit"
+            },
+            {
+              "Value": "YTD Credit"
+            }
+          ]
+        },
+        {
+          "RowType": "Section",
+          "Title": "Accounts",
+          "Rows": [
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Business Current Account (090)",
+                  "Attributes": [
+                    {
+                      "Value": "ac0000-0000-4000-9000-000000000008",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": "7212.40"
+                },
+                {
+                  "Value": ""
+                },
+                {
+                  "Value": "7212.40"
+                },
+                {
+                  "Value": ""
+                }
+              ]
+            },
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Sales (200)",
+                  "Attributes": [
+                    {
+                      "Value": "ac0000-0000-4000-9000-000000000009",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": ""
+                },
+                {
+                  "Value": "140000.00"
+                },
+                {
+                  "Value": ""
+                },
+                {
+                  "Value": "140000.00"
+                }
+              ]
+            },
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Wages and Salaries (477)",
+                  "Attributes": [
+                    {
+                      "Value": "ac0000-0000-4000-9000-000000000010",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": "60000.00"
+                },
+                {
+                  "Value": ""
+                },
+                {
+                  "Value": "60000.00"
+                },
+                {
+                  "Value": ""
+                }
+              ]
+            },
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Rent (469)",
+                  "Attributes": [
+                    {
+                      "Value": "ac0000-0000-4000-9000-000000000011",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": "15000.00"
+                },
+                {
+                  "Value": ""
+                },
+                {
+                  "Value": "15000.00"
+                },
+                {
+                  "Value": ""
+                }
+              ]
+            },
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "VAT (820)",
+                  "Attributes": [
+                    {
+                      "Value": "ac0000-0000-4000-9000-000000000012",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": ""
+                },
+                {
+                  "Value": "3100.00"
+                },
+                {
+                  "Value": ""
+                },
+                {
+                  "Value": "3100.00"
+                }
+              ]
+            },
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Retained Earnings (970)",
+                  "Attributes": [
+                    {
+                      "Value": "ac0000-0000-4000-9000-000000000014",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": "60887.60"
+                },
+                {
+                  "Value": ""
+                },
+                {
+                  "Value": "60887.60"
+                },
+                {
+                  "Value": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

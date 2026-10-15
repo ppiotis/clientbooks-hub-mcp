@@ -1,0 +1,64 @@
+{
+  "Reports": [
+    {
+      "ReportID": "BankSummary",
+      "ReportName": "Bank Summary",
+      "ReportType": "BankSummary",
+      "ReportDate": "30 September 2026",
+      "Rows": [
+        {
+          "RowType": "Header",
+          "Cells": [
+            {
+              "Value": "Bank Accounts"
+            },
+            {
+              "Value": "Opening Balance"
+            },
+            {
+              "Value": "Cash Received"
+            },
+            {
+              "Value": "Cash Spent"
+            },
+            {
+              "Value": "Closing Balance"
+            }
+          ]
+        },
+        {
+          "RowType": "Section",
+          "Title": "",
+          "Rows": [
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Business Cheque Account",
+                  "Attributes": [
+                    {
+                      "Value": "ac0000-0000-4000-9000-000000000024",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": "10880.55"
+                },
+                {
+                  "Value": "18840.00"
+                },
+                {
+                  "Value": "17380.00"
+                },
+                {
+                  "Value": "12340.55"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -77,7 +77,7 @@ export class Cache {
   private running?: Promise<SyncResult>;
   private timer?: NodeJS.Timeout;
 
-  constructor(private src: XeroSource, private defaultAsOf?: string) {}
+  constructor(private src: XeroSource, private defaultAsOf?: string, private beforeSync?: () => Promise<void>) {}
 
   asOf(override?: string) { return override ?? this.defaultAsOf ?? todayIso(); }
 
@@ -87,6 +87,7 @@ export class Cache {
   }
 
   private async doSync(asOf: string): Promise<SyncResult> {
+    if (this.beforeSync) await this.beforeSync();
     const tenants = await this.src.tenants();
     const res: SyncResult = { syncedAt: new Date().toISOString(), asOf, orgs: [] };
     const seen = new Set<string>();

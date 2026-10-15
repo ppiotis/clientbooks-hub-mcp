@@ -1,0 +1,67 @@
+{
+  "Accounts": [
+    {
+      "AccountID": "ac0000-0000-4000-9000-000000000008",
+      "Code": "090",
+      "Name": "Business Current Account",
+      "Type": "BANK",
+      "TaxType": "NONE",
+      "Class": "ASSET",
+      "Status": "ACTIVE"
+    },
+    {
+      "AccountID": "ac0000-0000-4000-9000-000000000009",
+      "Code": "200",
+      "Name": "Sales",
+      "Type": "REVENUE",
+      "TaxType": "OUTPUT2",
+      "Class": "REVENUE",
+      "Status": "ACTIVE"
+    },
+    {
+      "AccountID": "ac0000-0000-4000-9000-000000000010",
+      "Code": "477",
+      "Name": "Wages and Salaries",
+      "Type": "EXPENSE",
+      "TaxType": "NONE",
+      "Class": "EXPENSE",
+      "Status": "ACTIVE"
+    },
+    {
+      "AccountID": "ac0000-0000-4000-9000-000000000011",
+      "Code": "469",
+      "Name": "Rent",
+      "Type": "EXPENSE",
+      "TaxType": "INPUT2",
+      "Class": "EXPENSE",
+      "Status": "ACTIVE"
+    },
+    {
+      "AccountID": "ac0000-0000-4000-9000-000000000012",
+      "Code": "820",
+      "Name": "VAT",
+      "Type": "CURRLIAB",
+      "TaxType": "NONE",
+      "Class": "LIABILITY",
+      "Status": "ACTIVE"
+    },
+    {
+      "AccountID": "ac0000-0000-4000-9000-000000000013",
+      "Code": "825",
+      "Name": "Accruals",
+      "Type": "CURRLIAB",
+      "TaxType": "NONE",
+      "Class": "LIABILITY",
+      "Status": "ACTIVE"
+    },
+    {
+      "AccountID": "ac0000-0000-4000-9000-000000000014",
+      "Code": "970",
+      "Name": "Retained Earnings",
+      "Type": "EQUITY",
+      "TaxType": "NONE",
+      "Class": "EQUITY",
+      "Status": "ACTIVE"
+    }
+  ]
+}

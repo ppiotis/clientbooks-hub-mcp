@@ -1,0 +1,48 @@
+{
+  "Payments": [
+    {
+      "PaymentID": "p0000-0000-4000-9000-000000000059",
+      "Date": "/Date(1781913600000+0000)/",
+      "DateString": "2026-06-20T00:00:00",
+      "Amount": 1100,
+      "Reference": "",
+      "IsReconciled": true,
+      "Status": "AUTHORISED",
+      "PaymentType": "ACCRECPAYMENT",
+      "Account": {
+        "AccountID": "ac0000-0000-4000-9000-000000000024",
+        "Code": "090"
+      },
+      "Invoice": {
+        "InvoiceID": "10000-0000-4000-9000-000000000038",
+        "InvoiceNumber": "KC-0990",
+        "Contact": {
+          "ContactID": "c0000-0000-4000-9000-000000000018",
+          "Name": "Pop-up Events Co"
+        }
+      }
+    },
+    {
+      "PaymentID": "p0000-0000-4000-9000-000000000060",
+      "Date": "/Date(1782000000000+0000)/",
+      "DateString": "2026-06-21T00:00:00",
+      "Amount": 1100,
+      "Reference": "",
+      "IsReconciled": false,
+      "Status": "AUTHORISED",
+      "PaymentType": "ACCRECPAYMENT",
+      "Account": {
+        "AccountID": "ac0000-0000-4000-9000-000000000024",
+        "Code": "090"
+      },
+      "Invoice": {
+        "InvoiceID": "10000-0000-4000-9000-000000000038",
+        "InvoiceNumber": "KC-0990",
+        "Contact": {
+          "ContactID": "c0000-0000-4000-9000-000000000018",
+          "Name": "Pop-up Events Co"
+        }
+      }
+    }
+  ]
+}

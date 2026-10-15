@@ -1,0 +1,389 @@
+{
+  "Invoices": [
+    {
+      "Type": "ACCREC",
+      "InvoiceID": "10000-0000-4000-9000-000000000040",
+      "InvoiceNumber": "KC-1001",
+      "Reference": "",
+      "Status": "AUTHORISED",
+      "LineAmountTypes": "Exclusive",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-9000-000000000015",
+        "Name": "Brew Bar Cafe"
+      },
+      "Date": "/Date(1782864000000+0000)/",
+      "DateString": "2026-07-01T00:00:00",
+      "DueDate": "/Date(1785456000000+0000)/",
+      "DueDateString": "2026-07-31T00:00:00",
+      "CurrencyCode": "AUD",
+      "LineItems": [
+        {
+          "LineItemID": "l0000-0000-4000-9000-000000000039",
+          "Description": "Wholesale beans July",
+          "AccountCode": "200",
+          "LineAmount": 4000,
+          "TaxType": "OUTPUT",
+          "TaxAmount": 400,
+          "Quantity": 1,
+          "UnitAmount": 4000
+        }
+      ],
+      "SubTotal": 4000,
+      "TotalTax": 400,
+      "Total": 4400,
+      "AmountPaid": 0,
+      "AmountDue": 4400,
+      "HasAttachments": true
+    },
+    {
+      "Type": "ACCREC",
+      "InvoiceID": "10000-0000-4000-9000-000000000042",
+      "InvoiceNumber": "KC-1002",
+      "Reference": "",
+      "Status": "AUTHORISED",
+      "LineAmountTypes": "Exclusive",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-9000-000000000015",
+        "Name": "Brew Bar Cafe"
+      },
+      "Date": "/Date(1786752000000+0000)/",
+      "DateString": "2026-08-15T00:00:00",
+      "DueDate": "/Date(1789344000000+0000)/",
+      "DueDateString": "2026-09-14T00:00:00",
+      "CurrencyCode": "AUD",
+      "LineItems": [
+        {
+          "LineItemID": "l0000-0000-4000-9000-000000000041",
+          "Description": "Wholesale beans Aug",
+          "AccountCode": "200",
+          "LineAmount": 1500,
+          "TaxType": "OUTPUT",
+          "TaxAmount": 150,
+          "Quantity": 1,
+          "UnitAmount": 1500
+        }
+      ],
+      "SubTotal": 1500,
+      "TotalTax": 150,
+      "Total": 1650,
+      "AmountPaid": 0,
+      "AmountDue": 1650,
+      "HasAttachments": true
+    },
+    {
+      "Type": "ACCREC",
+      "InvoiceID": "10000-0000-4000-9000-000000000044",
+      "InvoiceNumber": "KC-1003",
+      "Reference": "",
+      "Status": "AUTHORISED",
+      "LineAmountTypes": "Exclusive",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-9000-000000000016",
+        "Name": "Laneway Roasters"
+      },
+      "Date": "/Date(1788566400000+0000)/",
+      "DateString": "2026-09-05T00:00:00",
+      "DueDate": "/Date(1791158400000+0000)/",
+      "DueDateString": "2026-10-05T00:00:00",
+      "CurrencyCode": "AUD",
+      "LineItems": [
+        {
+          "LineItemID": "l0000-0000-4000-9000-000000000043",
+          "Description": "Roasting contract",
+          "AccountCode": "200",
+          "LineAmount": 2000,
+          "TaxType": "",
+          "TaxAmount": 0,
+          "Quantity": 1,
+          "UnitAmount": 2000
+        }
+      ],
+      "SubTotal": 2000,
+      "TotalTax": 0,
+      "Total": 2000,
+      "AmountPaid": 0,
+      "AmountDue": 2000,
+      "HasAttachments": true
+    },
+    {
+      "Type": "ACCREC",
+      "InvoiceID": "10000-0000-4000-9000-000000000046",
+      "InvoiceNumber": "KC-1004",
+      "Reference": "",
+      "Status": "AUTHORISED",
+      "LineAmountTypes": "Exclusive",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-9000-000000000017",
+        "Name": "Harbourside Hotel"
+      },
+      "Date": "/Date(1788998400000+0000)/",
+      "DateString": "2026-09-10T00:00:00",
+      "DueDate": "/Date(1791590400000+0000)/",
+      "DueDateString": "2026-10-10T00:00:00",
+      "CurrencyCode": "AUD",
+      "LineItems": [
+        {
+          "LineItemID": "l0000-0000-4000-9000-000000000045",
+          "Description": "Coffee cart, conference",
+          "AccountCode": "200",
+          "LineAmount": 3300,
+          "TaxType": "BASEXCLUDED",
+          "TaxAmount": 0,
+          "Quantity": 1,
+          "UnitAmount": 3300
+        }
+      ],
+      "SubTotal": 3300,
+      "TotalTax": 0,
+      "Total": 3300,
+      "AmountPaid": 0,
+      "AmountDue": 3300,
+      "HasAttachments": true
+    },
+    {
+      "Type": "ACCREC",
+      "InvoiceID": "10000-0000-4000-9000-000000000048",
+      "InvoiceNumber": "KC-1005",
+      "Reference": "",
+      "Status": "DRAFT",
+      "LineAmountTypes": "Exclusive",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-9000-000000000018",
+        "Name": "Pop-up Events Co"
+      },
+      "Date": "/Date(1787184000000+0000)/",
+      "DateString": "2026-08-20T00:00:00",
+      "DueDate": "/Date(1789776000000+0000)/",
+      "DueDateString": "2026-09-19T00:00:00",
+      "CurrencyCode": "AUD",
+      "LineItems": [
+        {
+          "LineItemID": "l0000-0000-4000-9000-000000000047",
+          "Description": "Festival stall (unapproved)",
+          "AccountCode": "200",
+          "LineAmount": 800,
+          "TaxType": "OUTPUT",
+          "TaxAmount": 80,
+          "Quantity": 1,
+          "UnitAmount": 800
+        }
+      ],
+      "SubTotal": 800,
+      "TotalTax": 80,
+      "Total": 880,
+      "AmountPaid": 0,
+      "AmountDue": 880,
+      "HasAttachments": true
+    },
+    {
+      "Type": "ACCREC",
+      "InvoiceID": "10000-0000-4000-9000-000000000038",
+      "InvoiceNumber": "KC-0990",
+      "Reference": "",
+      "Status": "PAID",
+      "LineAmountTypes": "Exclusive",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-9000-000000000018",
+        "Name": "Pop-up Events Co"
+      },
+      "Date": "/Date(1781049600000+0000)/",
+      "DateString": "2026-06-10T00:00:00",
+      "DueDate": "/Date(1782259200000+0000)/",
+      "DueDateString": "2026-06-24T00:00:00",
+      "CurrencyCode": "AUD",
+      "LineItems": [
+        {
+          "LineItemID": "l0000-0000-4000-9000-000000000037",
+          "Description": "Event catering",
+          "AccountCode": "200",
+          "LineAmount": 1000,
+          "TaxType": "OUTPUT",
+          "TaxAmount": 100,
+          "Quantity": 1,
+          "UnitAmount": 1000
+        }
+      ],
+      "SubTotal": 1000,
+      "TotalTax": 100,
+      "Total": 1100,
+      "AmountPaid": 1100,
+      "AmountDue": 0,
+      "HasAttachments": true
+    },
+    {
+      "Type": "ACCPAY",
+      "InvoiceID": "10000-0000-4000-9000-000000000050",
+      "InvoiceNumber": "BB-7781",
+      "Reference": "",
+      "Status": "AUTHORISED",
+      "LineAmountTypes": "Exclusive",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-9000-000000000019",
+        "Name": "Bean Brokers Pty Ltd"
+      },
+      "Date": "/Date(1789171200000+0000)/",
+      "DateString": "2026-09-12T00:00:00",
+      "DueDate": "/Date(1791763200000+0000)/",
+      "DueDateString": "2026-10-12T00:00:00",
+      "CurrencyCode": "AUD",
+      "LineItems": [
+        {
+          "LineItemID": "l0000-0000-4000-9000-000000000049",
+          "Description": "Green beans 60kg",
+          "AccountCode": "310",
+          "LineAmount": 5000,
+          "TaxType": "INPUT",
+          "TaxAmount": 500,
+          "Quantity": 1,
+          "UnitAmount": 5000
+        }
+      ],
+      "SubTotal": 5000,
+      "TotalTax": 500,
+      "Total": 5500,
+      "AmountPaid": 0,
+      "AmountDue": 5500,
+      "HasAttachments": true
+    },
+    {
+      "Type": "ACCPAY",
+      "InvoiceID": "10000-0000-4000-9000-000000000052",
+      "InvoiceNumber": "BB-7781",
+      "Reference": "",
+      "Status": "AUTHORISED",
+      "LineAmountTypes": "Exclusive",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-9000-000000000019",
+        "Name": "Bean Brokers Pty Ltd"
+      },
+      "Date": "/Date(1789257600000+0000)/",
+      "DateString": "2026-09-13T00:00:00",
+      "DueDate": "/Date(1791849600000+0000)/",
+      "DueDateString": "2026-10-13T00:00:00",
+      "CurrencyCode": "AUD",
+      "LineItems": [
+        {
+          "LineItemID": "l0000-0000-4000-9000-000000000051",
+          "Description": "Green beans 60kg",
+          "AccountCode": "310",
+          "LineAmount": 5000,
+          "TaxType": "INPUT",
+          "TaxAmount": 500,
+          "Quantity": 1,
+          "UnitAmount": 5000
+        }
+      ],
+      "SubTotal": 5000,
+      "TotalTax": 500,
+      "Total": 5500,
+      "AmountPaid": 0,
+      "AmountDue": 5500,
+      "HasAttachments": false
+    },
+    {
+      "Type": "ACCPAY",
+      "InvoiceID": "10000-0000-4000-9000-000000000054",
+      "InvoiceNumber": "RENT-SEP",
+      "Reference": "",
+      "Status": "AUTHORISED",
+      "LineAmountTypes": "Exclusive",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-9000-000000000020",
+        "Name": "Collins St Property"
+      },
+      "Date": "/Date(1788220800000+0000)/",
+      "DateString": "2026-09-01T00:00:00",
+      "DueDate": "/Date(1788825600000+0000)/",
+      "DueDateString": "2026-09-08T00:00:00",
+      "CurrencyCode": "AUD",
+      "LineItems": [
+        {
+          "LineItemID": "l0000-0000-4000-9000-000000000053",
+          "Description": "Rent Sep 2026",
+          "AccountCode": "469",
+          "LineAmount": 6000,
+          "TaxType": "INPUT",
+          "TaxAmount": 600,
+          "Quantity": 1,
+          "UnitAmount": 6000
+        }
+      ],
+      "SubTotal": 6000,
+      "TotalTax": 600,
+      "Total": 6600,
+      "AmountPaid": 0,
+      "AmountDue": 6600,
+      "HasAttachments": true
+    },
+    {
+      "Type": "ACCPAY",
+      "InvoiceID": "10000-0000-4000-9000-000000000056",
+      "InvoiceNumber": "TEL-0925",
+      "Reference": "",
+      "Status": "AUTHORISED",
+      "LineAmountTypes": "Exclusive",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-9000-000000000021",
+        "Name": "Telstra"
+      },
+      "Date": "/Date(1790294400000+0000)/",
+      "DateString": "2026-09-25T00:00:00",
+      "DueDate": "/Date(1792886400000+0000)/",
+      "DueDateString": "2026-10-25T00:00:00",
+      "CurrencyCode": "AUD",
+      "LineItems": [
+        {
+          "LineItemID": "l0000-0000-4000-9000-000000000055",
+          "Description": "Mobile + NBN",
+          "AccountCode": "489",
+          "LineAmount": 300,
+          "TaxType": "INPUT",
+          "TaxAmount": 45,
+          "Quantity": 1,
+          "UnitAmount": 300
+        }
+      ],
+      "SubTotal": 300,
+      "TotalTax": 45,
+      "Total": 345,
+      "AmountPaid": 0,
+      "AmountDue": 345,
+      "HasAttachments": true
+    },
+    {
+      "Type": "ACCPAY",
+      "InvoiceID": "10000-0000-4000-9000-000000000058",
+      "InvoiceNumber": "BAS-Q4",
+      "Reference": "",
+      "Status": "AUTHORISED",
+      "LineAmountTypes": "Exclusive",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-9000-000000000023",
+        "Name": "ATO"
+      },
+      "Date": "/Date(1785196800000+0000)/",
+      "DateString": "2026-07-28T00:00:00",
+      "DueDate": "/Date(1787875200000+0000)/",
+      "DueDateString": "2026-08-28T00:00:00",
+      "CurrencyCode": "AUD",
+      "LineItems": [
+        {
+          "LineItemID": "l0000-0000-4000-9000-000000000057",
+          "Description": "BAS Apr-Jun",
+          "AccountCode": "820",
+          "LineAmount": 2950,
+          "TaxType": "BASEXCLUDED",
+          "TaxAmount": 0,
+          "Quantity": 1,
+          "UnitAmount": 2950
+        }
+      ],
+      "SubTotal": 2950,
+      "TotalTax": 0,
+      "Total": 2950,
+      "AmountPaid": 0,
+      "AmountDue": 2950,
+      "HasAttachments": true
+    }
+  ]
+}

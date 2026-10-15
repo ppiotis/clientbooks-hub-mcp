@@ -1,0 +1,28 @@
+{
+  "TaxRates": [
+    {
+      "Name": "20% (VAT on Income)",
+      "TaxType": "OUTPUT2",
+      "EffectiveRate": 20,
+      "Status": "ACTIVE"
+    },
+    {
+      "Name": "20% (VAT on Expenses)",
+      "TaxType": "INPUT2",
+      "EffectiveRate": 20,
+      "Status": "ACTIVE"
+    },
+    {
+      "Name": "Zero Rated Income",
+      "TaxType": "ZERORATEDOUTPUT",
+      "EffectiveRate": 0,
+      "Status": "ACTIVE"
+    },
+    {
+      "Name": "No VAT",
+      "TaxType": "NONE",
+      "EffectiveRate": 0,
+      "Status": "ACTIVE"
+    }
+  ]
+}

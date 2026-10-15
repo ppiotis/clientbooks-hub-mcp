@@ -16,7 +16,7 @@ export async function demoOrgs() {
 }
 
 /** A fake Xero (identity + api) that serves the fixtures through the LIVE code path. */
-export function fakeXero(opts: { rotate?: boolean } = {}) {
+export function fakeXero(opts: { rotate?: boolean; connections?: () => { tenantId: string; tenantName: string }[]; scope?: string } = {}) {
   const calls: { url: string; init?: RequestInit }[] = [];
   let n = 0;
   const tenants: Record<string, string> = { "tid-bakery": "harbour-bakery", "tid-joinery": "northwind-joinery" };
@@ -26,10 +26,11 @@ export function fakeXero(opts: { rotate?: boolean } = {}) {
     calls.push({ url, init });
     if (url === "https://identity.xero.com/connect/token") {
       n += 1;
-      return json({ access_token: `at-${n}`, refresh_token: opts.rotate === false ? "rt-1" : `rt-${n}`, expires_in: 1800, token_type: "Bearer", scope: "offline_access accounting.invoices.read" });
+      return json({ access_token: `at-${n}`, refresh_token: opts.rotate === false ? "rt-1" : `rt-${n}`, expires_in: 1800, token_type: "Bearer", scope: opts.scope ?? "offline_access accounting.invoices.read" });
     }
     if (url.startsWith("https://api.xero.com/connections")) {
       if (init?.method === "DELETE") return new Response(null, { status: 204 });
+      if (opts.connections) return json(opts.connections().map((t, i) => ({ id: `conn-${i}`, tenantType: "ORGANISATION", ...t })));
       return json(Object.entries(tenants).map(([id, dir], i) => ({ id: `conn-${i}`, tenantId: id, tenantType: "ORGANISATION", tenantName: fixture(dir, "Organisation").Organisations[0].Name })));
     }
     const m = /api\.xro\/2\.0\/(?:Reports\/)?([A-Za-z]+)(\?.*)?$/.exec(url);
@@ -37,9 +38,13 @@ export function fakeXero(opts: { rotate?: boolean } = {}) {
       const h = new Headers(init?.headers);
       const dir = tenants[h.get("xero-tenant-id") ?? ""];
       if (!dir) return json({ error: "no tenant" }, 403);
+      if (init?.method === "PUT" && m[1] === "ManualJournals") {
+        const body = JSON.parse(String(init.body));
+        return json({ ManualJournals: body.ManualJournals.map((j: Record<string, unknown>) => ({ ...j, ManualJournalID: "mj-created-1" })) });
+      }
       const q = new URLSearchParams(m[2] ?? "");
       if (q.get("page") && q.get("page") !== "1") return json({ [m[1]]: [] });
-      return json(fixture(dir, m[1]));
+      try { return json(fixture(dir, m[1])); } catch { return json({}); }
     }
     return json({ error: "unexpected " + url }, 404);
   }) as typeof fetch;

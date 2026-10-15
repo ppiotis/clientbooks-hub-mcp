@@ -1,0 +1,18 @@
+{
+  "Organisations": [
+    {
+      "OrganisationID": "c3c3c3c3-0000-4000-8000-000000000003",
+      "Name": "Kookaburra Coffee Co Pty Ltd",
+      "LegalName": "Kookaburra Coffee Co Pty Ltd",
+      "BaseCurrency": "AUD",
+      "CountryCode": "AU",
+      "ShortCode": "!KOOK3",
+      "TaxNumber": "51 824 753 556",
+      "SalesTaxBasis": "ACCRUALS",
+      "SalesTaxPeriod": "QUARTERLY",
+      "PeriodLockDate": "2026-03-31T00:00:00",
+      "FinancialYearEndDay": 30,
+      "FinancialYearEndMonth": 6
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "TaxRates": [
+    {
+      "Name": "GST on Income",
+      "TaxType": "OUTPUT",
+      "EffectiveRate": 10,
+      "Status": "ACTIVE"
+    },
+    {
+      "Name": "GST on Expenses",
+      "TaxType": "INPUT",
+      "EffectiveRate": 10,
+      "Status": "ACTIVE"
+    },
+    {
+      "Name": "GST Free Income",
+      "TaxType": "EXEMPTOUTPUT",
+      "EffectiveRate": 0,
+      "Status": "ACTIVE"
+    },
+    {
+      "Name": "BAS Excluded",
+      "TaxType": "BASEXCLUDED",
+      "EffectiveRate": 0,
+      "Status": "ACTIVE"
+    }
+  ]
+}

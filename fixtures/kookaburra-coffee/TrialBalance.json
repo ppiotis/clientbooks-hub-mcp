@@ -1,0 +1,303 @@
+{
+  "Reports": [
+    {
+      "ReportID": "TrialBalance",
+      "ReportName": "Trial Balance",
+      "ReportType": "TrialBalance",
+      "ReportTitles": [
+        "Trial Balance",
+        "Kookaburra Coffee Co Pty Ltd",
+        "As at 30 September 2026"
+      ],
+      "ReportDate": "30 September 2026",
+      "Rows": [
+        {
+          "RowType": "Header",
+          "Cells": [
+            {
+              "Value": "Account"
+            },
+            {
+              "Value": "Debit"
+            },
+            {
+              "Value": "Credit"
+            },
+            {
+              "Value": "YTD Debit"
+            },
+            {
+              "Value": "YTD Credit"
+            }
+          ]
+        },
+        {
+          "RowType": "Section",
+          "Title": "Accounts",
+          "Rows": [
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Business Cheque Account (090)",
+                  "Attributes": [
+                    {
+                      "Value": "ac0000-0000-4000-9000-000000000024",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": "12340.55"
+                },
+                {
+                  "Value": ""
+                },
+                {
+                  "Value": "12340.55"
+                },
+                {
+                  "Value": ""
+                }
+              ]
+            },
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Sales (200)",
+                  "Attributes": [
+                    {
+                      "Value": "ac0000-0000-4000-9000-000000000025",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": ""
+                },
+                {
+                  "Value": "50500.00"
+                },
+                {
+                  "Value": ""
+                },
+                {
+                  "Value": "50500.00"
+                }
+              ]
+            },
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Cost of Goods Sold (310)",
+                  "Attributes": [
+                    {
+                      "Value": "ac0000-0000-4000-9000-000000000026",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": "17500.00"
+                },
+                {
+                  "Value": ""
+                },
+                {
+                  "Value": "17500.00"
+                },
+                {
+                  "Value": ""
+                }
+              ]
+            },
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Rent (469)",
+                  "Attributes": [
+                    {
+                      "Value": "ac0000-0000-4000-9000-000000000027",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": "18000.00"
+                },
+                {
+                  "Value": ""
+                },
+                {
+                  "Value": "18000.00"
+                },
+                {
+                  "Value": ""
+                }
+              ]
+            },
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Wages and Salaries (477)",
+                  "Attributes": [
+                    {
+                      "Value": "ac0000-0000-4000-9000-000000000030",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": "15600.00"
+                },
+                {
+                  "Value": ""
+                },
+                {
+                  "Value": "15600.00"
+                },
+                {
+                  "Value": ""
+                }
+              ]
+            },
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Repairs and Maintenance (473)",
+                  "Attributes": [
+                    {
+                      "Value": "ac0000-0000-4000-9000-000000000029",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": "4570.00"
+                },
+                {
+                  "Value": ""
+                },
+                {
+                  "Value": "4570.00"
+                },
+                {
+                  "Value": ""
+                }
+              ]
+            },
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "GST (820)",
+                  "Attributes": [
+                    {
+                      "Value": "ac0000-0000-4000-9000-000000000032",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": ""
+                },
+                {
+                  "Value": "2950.00"
+                },
+                {
+                  "Value": ""
+                },
+                {
+                  "Value": "2950.00"
+                }
+              ]
+            },
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Suspense (899)",
+                  "Attributes": [
+                    {
+                      "Value": "ac0000-0000-4000-9000-000000000033",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": ""
+                },
+                {
+                  "Value": "734.20"
+                },
+                {
+                  "Value": ""
+                },
+                {
+                  "Value": "734.20"
+                }
+              ]
+            },
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Director Loan Account (835)",
+                  "Attributes": [
+                    {
+                      "Value": "ac0000-0000-4000-9000-000000000035",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": ""
+                },
+                {
+                  "Value": "3000.00"
+                },
+                {
+                  "Value": ""
+                },
+                {
+                  "Value": "3000.00"
+                }
+              ]
+            },
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Retained Earnings (960)",
+                  "Attributes": [
+                    {
+                      "Value": "ac0000-0000-4000-9000-000000000036",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": ""
+                },
+                {
+                  "Value": "10826.35"
+                },
+                {
+                  "Value": ""
+                },
+                {
+                  "Value": "10826.35"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

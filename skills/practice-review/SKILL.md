@@ -14,6 +14,7 @@ Pick the narrowest tool for the question; for "how is my practice doing?" run th
 | Is client X OK / unusual patterns | `client_health` with `org` |
 | Practice totals, average DSO | `practice_dashboard` (`months`, default 3) |
 | Clients trending toward trouble | `clients_trending_trouble` |
+| Exceptions, unreconciled >N days, duplicates, tax codes, BAS/VAT or close readiness | see the **practice-scan** skill (`scan_issues`, `unreconciled_items`, `tax_readiness`, `close_readiness`, `practice_scan`) |
 
 How to present results:
 - Always state the **as-of date** and that figures come from Xero at last sync.

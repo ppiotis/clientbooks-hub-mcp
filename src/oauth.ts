@@ -121,6 +121,50 @@ export class XeroOAuth {
     return target;
   }
 
+  /**
+   * Re-reads GET /connections for every stored grant: updates organisation names and drops tenants
+   * whose connection was revoked in Xero (Settings > Connected apps). It never adds tenants: new orgs
+   * are only added through the connect flow, so the accountant always chooses what is connected.
+   */
+  async refreshConnections(): Promise<{ checked: number; renamed: string[]; removed: string[]; errors: string[] }> {
+    const out = { checked: 0, renamed: [] as string[], removed: [] as string[], errors: [] as string[] };
+    const data = await this.store.load();
+    const rename = new Map<string, string>(); const drop = new Set<string>();
+    for (const conn of data.connections) {
+      const first = conn.tenants[0];
+      if (!first) continue;
+      try {
+        const token = await this.accessTokenFor(first.tenantId);
+        const res = await this.fetchImpl(CONNECTIONS_URL, { headers: { authorization: `Bearer ${token}`, accept: "application/json" } });
+        if (!res.ok) throw new Error(`/connections returned ${res.status}`);
+        const live = new Map(((await res.json()) as { tenantId: string; tenantName: string; tenantType: string }[])
+          .filter((c) => c.tenantType === "ORGANISATION").map((c) => [c.tenantId, c.tenantName]));
+        out.checked += conn.tenants.length;
+        for (const t of conn.tenants) {
+          const name = live.get(t.tenantId);
+          if (name === undefined) { drop.add(t.tenantId); out.removed.push(t.tenantName); }
+          else if (name !== t.tenantName) { rename.set(t.tenantId, name); out.renamed.push(`${t.tenantName} -> ${name}`); }
+        }
+      } catch (e) {
+        out.errors.push(`${first.tenantName}: ${e instanceof Error ? e.message : String(e)}`);
+      }
+    }
+    if (rename.size || drop.size) {
+      const fresh = await this.store.load(); // re-load: a token refresh may have rewritten the file meanwhile
+      fresh.connections = fresh.connections
+        .map((c) => ({ ...c, tenants: c.tenants.filter((t) => !drop.has(t.tenantId)).map((t) => ({ ...t, tenantName: rename.get(t.tenantId) ?? t.tenantName })) }))
+        .filter((c) => c.tenants.length);
+      await this.store.save(fresh);
+    }
+    return out;
+  }
+
+  /** Scopes granted on the grant that holds this tenant. */
+  async scopesFor(tenantId: string): Promise<string[]> {
+    const conn = (await this.store.load()).connections.find((c) => c.tenants.some((t) => t.tenantId === tenantId));
+    return conn?.scopes ?? [];
+  }
+
   async disconnect(tenantId: string): Promise<{ removed: boolean; revoked: boolean }> {
     const data = await this.store.load();
     const conn = data.connections.find((c) => c.tenants.some((t) => t.tenantId === tenantId));

@@ -53,7 +53,7 @@ describe("live API regressions", () => {
     const live: XeroSource = { kind: "live", tenants: async () => [{ tenantId: "live-1", tenantName: "Real Org" }], get: async () => ({ from: "live" }) };
     const m = new MixedSource(live, new FixtureSource(FIXTURES));
     const t = await m.tenants();
-    expect(t.map((x) => x.tenantName)).toEqual(["Real Org", "Harbour Bakery Ltd (sample)", "Northwind Joinery Ltd (sample)"]);
+    expect(t.map((x) => x.tenantName)).toEqual(["Real Org", "Harbour Bakery Ltd (sample)", "Kookaburra Coffee Co Pty Ltd (sample)", "Northwind Joinery Ltd (sample)"]);
     expect(await m.get("live-1", "Organisation")).toEqual({ from: "live" });
     expect(((await m.get("harbour-bakery", "Organisation")) as { Organisations: { Name: string }[] }).Organisations[0].Name).toBe("Harbour Bakery Ltd (sample)");
   });
