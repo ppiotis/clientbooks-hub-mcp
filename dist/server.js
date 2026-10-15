@@ -4,7 +4,7 @@ import { safe, UserError } from "./result.js";
 import { getContext } from "./context.js";
 import { health, overdueAcross, payrollRisk, practiceDashboard, trendingTrouble } from "./analytics.js";
 import { writePack } from "./xlsx.js";
-export const VERSION = "1.0.1";
+export const VERSION = "1.0.2";
 const RO = { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: true };
 const asOf = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Use YYYY-MM-DD").optional().describe("Report date (YYYY-MM-DD). Defaults to today (demo mode: 2026-09-30).");
 const orgArg = z.string().min(1).max(120).describe("Client org: tenant id or (part of) the organisation name, e.g. 'Northwind'.");

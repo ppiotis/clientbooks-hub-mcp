@@ -1,7 +1,7 @@
 /** Regressions found running against the real Xero API (Demo Company (Global), Oct 2026). */
 import { describe, it, expect } from "vitest";
 import { normalizeBankSummary } from "../src/normalize.js";
-import { monthEnd, fetchOrg } from "../src/sync.js";
+import { monthEnd, fetchOrg, pnlQuery } from "../src/sync.js";
 import { FixtureSource, MixedSource, type XeroSource } from "../src/source.js";
 import { FIXTURES } from "./helpers.js";
 
@@ -33,6 +33,21 @@ describe("live API regressions", () => {
     const spy: XeroSource = { kind: "demo", tenants: () => fx.tenants(), get: (t, r, q) => { if (r === "Reports/ProfitAndLoss") seen.push(q ?? {}); return fx.get(t, r, q); } };
     await fetchOrg(spy, "harbour-bakery", "2026-10-15");
     expect(seen[0]).toMatchObject({ fromDate: "2026-10-01", toDate: "2026-10-31", timeframe: "MONTH" });
+  });
+  it("30-day month-ends anchor the P&L on the next 31-day month so prior months are whole (v1.0.2)", async () => {
+    expect(pnlQuery("2026-10-15")).toEqual({ query: { fromDate: "2026-10-01", toDate: "2026-10-31", periods: "5", timeframe: "MONTH" }, shifted: false });
+    expect(pnlQuery("2026-09-30")).toEqual({ query: { fromDate: "2026-10-01", toDate: "2026-10-31", periods: "6", timeframe: "MONTH" }, shifted: true });
+    expect(pnlQuery("2027-02-28").query).toMatchObject({ fromDate: "2027-03-01", toDate: "2027-03-31" });
+    // Live-shaped 7-column response for as-of 30 Sep: anchor Oct column is dropped, Jul is the whole month.
+    const cols = ["31 Oct 26", "30 Sep 26", "31 Aug 26", "31 Jul 26", "30 Jun 26", "31 May 26", "30 Apr 26"];
+    const inc = ["0", "13829.59", "11230.84", "4478.75", "0", "0", "0"];
+    const payload = { Reports: [{ Rows: [{ RowType: "Header", Cells: [{ Value: "" }, ...cols.map((Value) => ({ Value }))] },
+      { RowType: "Section", Title: "Income", Rows: [{ RowType: "Row", Cells: [{ Value: "Sales" }, ...inc.map((Value) => ({ Value }))] }] }] }] };
+    const fx = new FixtureSource(FIXTURES);
+    const spy: XeroSource = { kind: "live", tenants: () => fx.tenants(), get: (t, r, q) => (r === "Reports/ProfitAndLoss" ? Promise.resolve(payload) : fx.get(t, r, q)) };
+    const o = await fetchOrg(spy, "harbour-bakery", "2026-09-30");
+    expect(o.pnl.map((m) => m.label)).toEqual(cols.slice(1));
+    expect(o.pnl.reduce((a, m) => a + m.income, 0)).toBeCloseTo(29539.18, 2);
   });
   it("mixed source serves live tenants and labelled fixture tenants side by side", async () => {
     const live: XeroSource = { kind: "live", tenants: async () => [{ tenantId: "live-1", tenantName: "Real Org" }], get: async () => ({ from: "live" }) };

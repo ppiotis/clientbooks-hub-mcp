@@ -15,6 +15,24 @@ export function monthEnd(iso: string) {
 }
 export function todayIso() { const d = new Date(); return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`; }
 
+/**
+ * Xero builds MONTH comparatives by stepping both dates back a month, keeping the day number (clamped).
+ * Anchored on a 30th (or Feb 28th), every prior 31-day month is cut to the 1st-30th (seen live: 30 Sep
+ * as-of gave July as 1-30 Jul, losing 547.80 of income). So when the as-of month has fewer than 31 days we
+ * anchor on the following month (always 31 days after a 30-day month or February), ask for one extra
+ * period, and drop that future anchor column.
+ */
+export function pnlQuery(asOf: string): { query: Record<string, string>; shifted: boolean } {
+  const end = monthEnd(asOf);
+  if (end.endsWith("-31")) return { query: { fromDate: monthStart(asOf), toDate: end, periods: "5", timeframe: "MONTH" }, shifted: false };
+  const [y, m] = end.split("-").map(Number);
+  const ny = m === 12 ? y + 1 : y, nm = m === 12 ? 1 : m + 1;
+  const next = `${ny}-${pad(nm)}-01`;
+  return { query: { fromDate: next, toDate: monthEnd(next), periods: "6", timeframe: "MONTH" }, shifted: true };
+}
+/** Drops the extra anchor month only if Xero actually returned it (7 columns); fixtures return 6. */
+function dropAnchor<T>(months: T[]): T[] { return months.length === 7 ? months.slice(1) : months; }
+
 async function allPages(src: XeroSource, tenantId: string, resource: string, key: string, query: Record<string, string>): Promise<X[]> {
   const out: X[] = [];
   for (let page = 1; page <= 50; page++) {
@@ -36,7 +54,8 @@ export async function fetchOrg(src: XeroSource, tenantId: string, asOf: string):
   const bankSummary = await src.get(tenantId, "Reports/BankSummary", { fromDate: monthStart(asOf), toDate: asOf });
     // Whole calendar months: Xero repeats the fromDate..toDate window for each comparison period, so a
   // mid-month toDate would turn every prior month into a half month (seen live against Demo Company).
-  const pnl = await src.get(tenantId, "Reports/ProfitAndLoss", { fromDate: monthStart(asOf), toDate: monthEnd(asOf), periods: "5", timeframe: "MONTH" });
+  const pnlQ = pnlQuery(asOf);
+  const pnlPayload = await src.get(tenantId, "Reports/ProfitAndLoss", pnlQ.query);
   const bs = await src.get(tenantId, "Reports/BalanceSheet", { date: asOf, periods: "5", timeframe: "MONTH" });
   const unrec = normalizeUnreconciled({ BankTransactions: bankTx });
   return {
@@ -44,7 +63,7 @@ export async function fetchOrg(src: XeroSource, tenantId: string, asOf: string):
     invoices: normalizeInvoices(tenantId, { Invoices: invoices }, currency),
     contacts: contacts.length,
     bank: normalizeBankSummary(bankSummary).map((b) => ({ ...b, unreconciledCount: unrec.get(b.id)?.count ?? 0, unreconciledAmount: unrec.get(b.id)?.amount ?? 0 })),
-    pnl: normalizePnl(pnl),
+    pnl: pnlQ.shifted ? dropAnchor(normalizePnl(pnlPayload)) : normalizePnl(pnlPayload),
     directorLoans: normalizeDirectorLoans(bs),
   };
 }

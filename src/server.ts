@@ -6,7 +6,7 @@ import { health, overdueAcross, payrollRisk, practiceDashboard, trendingTrouble 
 import { writePack } from "./xlsx.js";
 import type { OrgSnapshot } from "./normalize.js";
 
-export const VERSION = "1.0.1";
+export const VERSION = "1.0.2";
 
 const RO = { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: true } as const;
 const asOf = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Use YYYY-MM-DD").optional().describe("Report date (YYYY-MM-DD). Defaults to today (demo mode: 2026-09-30).");
