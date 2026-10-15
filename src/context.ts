@@ -1,7 +1,7 @@
 import { loadConfig, type Config } from "./config.js";
 import { TokenStore } from "./tokens.js";
 import { XeroOAuth, type FetchLike } from "./oauth.js";
-import { FixtureSource, LiveSource, type XeroSource } from "./source.js";
+import { FixtureSource, LiveSource, MixedSource, type XeroSource } from "./source.js";
 import { Cache } from "./sync.js";
 import type { PayrollProfile } from "./analytics.js";
 
@@ -13,7 +13,9 @@ export function buildContext(env: NodeJS.ProcessEnv = process.env, fetchImpl: Fe
   const cfg = loadConfig(env);
   const store = new TokenStore(cfg.tokenFile, cfg.tokenKey);
   const oauth = new XeroOAuth(cfg, store, fetchImpl);
-  const source: XeroSource = cfg.demo ? new FixtureSource(cfg.fixturesDir) : new LiveSource(store, oauth, fetchImpl);
+  const live = new LiveSource(store, oauth, fetchImpl);
+  const source: XeroSource = cfg.demo ? new FixtureSource(cfg.fixturesDir)
+    : env.XERO_AGG_EXTRA_FIXTURES ? new MixedSource(live, new FixtureSource(env.XERO_AGG_EXTRA_FIXTURES)) : live;
   const cache = new Cache(source, cfg.asOf);
   return { cfg, store, oauth, source, cache, payroll: new Map() };
 }

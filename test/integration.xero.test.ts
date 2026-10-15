@@ -6,12 +6,12 @@
  * NOTE: Xero rotates refresh tokens on every use. Point XERO_AGG_TOKEN_FILE at a
  * persistent path so the rotated token is kept (encrypted) for the next run.
  */
-import { describe, it, expect, beforeAll } from "vitest";
+import { describe, it, expect, beforeAll, afterAll } from "vitest";
 import path from "node:path";
 import { buildContext } from "../src/context.js";
 import { agedReceivables, overdueAcross, payrollRisk, health } from "../src/analytics.js";
 import { writePack } from "../src/xlsx.js";
-import { tmp } from "./helpers.js";
+import { tmp, rm } from "./helpers.js";
 
 
 const e = process.env;
@@ -27,6 +27,7 @@ describe.skipIf(!enabled)("Xero API integration (Demo Company)", () => {
     if (e.XERO_REFRESH_TOKEN) await ctx.oauth.importRefreshToken(e.XERO_REFRESH_TOKEN);
     expect((await ctx.source.tenants()).length).toBeGreaterThan(0);
   }, 60_000);
+  afterAll(() => rm(dir)); // the test pack is live client data: don't leave it in /tmp
 
   it("syncs every connected org with no errors", async () => {
     const r = await ctx.cache.sync();
@@ -39,6 +40,8 @@ describe.skipIf(!enabled)("Xero API integration (Demo Company)", () => {
       expect(o.currency).toMatch(/^[A-Z]{3}$/);
       expect(o.pnl.length).toBeGreaterThan(0);
       expect(o.bank.length).toBeGreaterThan(0);
+      // Regression: live BankSummary carries the AccountID as attribute "accountID".
+      for (const b of o.bank) expect(b.id).toMatch(/^[0-9a-f-]{36}$/);
       const aged = agedReceivables(o);
       expect(Math.round(Object.values(aged.totals).reduce((a, b) => a + b, 0) * 100) / 100).toBe(aged.total);
       expect(overdueAcross([o], 30).count).toBeLessThanOrEqual(aged.rows.length);

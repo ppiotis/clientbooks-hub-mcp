@@ -8,6 +8,11 @@ type X = any;
 
 const pad = (n: number) => String(n).padStart(2, "0");
 export function monthStart(iso: string) { return iso.slice(0, 8) + "01"; }
+/** Last calendar day of the month containing iso (YYYY-MM-DD). */
+export function monthEnd(iso: string) {
+  const [y, m] = iso.slice(0, 7).split("-").map(Number);
+  return `${y}-${pad(m)}-${pad(new Date(Date.UTC(y, m, 0)).getUTCDate())}`;
+}
 export function todayIso() { const d = new Date(); return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`; }
 
 async function allPages(src: XeroSource, tenantId: string, resource: string, key: string, query: Record<string, string>): Promise<X[]> {
@@ -29,7 +34,9 @@ export async function fetchOrg(src: XeroSource, tenantId: string, asOf: string):
   const contacts = await allPages(src, tenantId, "Contacts", "Contacts", { summaryOnly: "true", where: 'ContactStatus=="ACTIVE"' });
   const bankTx = await allPages(src, tenantId, "BankTransactions", "BankTransactions", { where: "IsReconciled==false" });
   const bankSummary = await src.get(tenantId, "Reports/BankSummary", { fromDate: monthStart(asOf), toDate: asOf });
-  const pnl = await src.get(tenantId, "Reports/ProfitAndLoss", { fromDate: monthStart(asOf), toDate: asOf, periods: "5", timeframe: "MONTH" });
+    // Whole calendar months: Xero repeats the fromDate..toDate window for each comparison period, so a
+  // mid-month toDate would turn every prior month into a half month (seen live against Demo Company).
+  const pnl = await src.get(tenantId, "Reports/ProfitAndLoss", { fromDate: monthStart(asOf), toDate: monthEnd(asOf), periods: "5", timeframe: "MONTH" });
   const bs = await src.get(tenantId, "Reports/BalanceSheet", { date: asOf, periods: "5", timeframe: "MONTH" });
   const unrec = normalizeUnreconciled({ BankTransactions: bankTx });
   return {

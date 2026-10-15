@@ -72,3 +72,28 @@ export class FixtureSource implements XeroSource {
     return data;
   }
 }
+
+/**
+ * Live orgs plus fixture orgs side by side (XERO_AGG_EXTRA_FIXTURES=<dir>). For trials and reviewer
+ * testing when only one real Xero org is available. Fixture tenants are labelled "(sample)".
+ */
+export class MixedSource implements XeroSource {
+  kind = "live" as const;
+  private fixtureIds = new Set<string>();
+  constructor(private live: XeroSource, private fixtures: FixtureSource) {}
+  async tenants(): Promise<Tenant[]> {
+    const fx = await this.fixtures.tenants();
+    this.fixtureIds = new Set(fx.map((t) => t.tenantId));
+    return [...(await this.live.tenants()), ...fx.map((t) => ({ ...t, tenantName: `${t.tenantName} (sample)` }))];
+  }
+  async get(tenantId: string, resource: string, query: Record<string, string> = {}) {
+    if (!this.fixtureIds.size) await this.tenants();
+    if (!this.fixtureIds.has(tenantId)) return this.live.get(tenantId, resource, query);
+    const data = await this.fixtures.get(tenantId, resource, query);
+    if (resource === "Organisation") {
+      const orgs = (data as { Organisations?: { Name: string }[] }).Organisations ?? [];
+      return { ...data, Organisations: orgs.map((o) => ({ ...o, Name: `${o.Name} (sample)` })) };
+    }
+    return data;
+  }
+}

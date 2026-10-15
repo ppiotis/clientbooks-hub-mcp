@@ -1,6 +1,6 @@
 {
   "name": "xero-aggregator-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Multi-tenant Xero aggregator MCP server for accountants: read-only OAuth2 (PKCE) per client org, scheduled sync into one cross-org model, overdue invoices, payroll risk, client health scores, practice dashboard and .xlsx month-end packs. Tokens encrypted at rest; financial data in memory only.",
   "type": "module",
   "license": "MIT",

@@ -50,7 +50,9 @@ export function normalizeBankSummary(payload) {
             if (row.RowType !== "Row" || !row.Cells)
                 continue;
             const c0 = row.Cells[0];
-            out.push({ id: c0.Attributes?.find((a) => a.Id === "account")?.Value ?? String(c0.Value), name: String(c0.Value), closingBalance: round2(num(row.Cells[col]?.Value)) });
+            // Live Xero puts the bank AccountID on cell 0 as Id "accountID"; the money cells use Id "account".
+            const attrId = (c) => c?.Attributes?.find((a) => /^account(id)?$/i.test(a.Id))?.Value;
+            out.push({ id: attrId(c0) ?? row.Cells.map((c) => attrId(c)).find(Boolean) ?? String(c0.Value), name: String(c0.Value), closingBalance: round2(num(row.Cells[col]?.Value)) });
         }
     }
     return out;
