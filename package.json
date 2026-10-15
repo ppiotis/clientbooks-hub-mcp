@@ -1,0 +1,61 @@
+{
+  "name": "xero-aggregator-mcp",
+  "version": "1.0.0",
+  "description": "Multi-tenant Xero aggregator MCP server for accountants: read-only OAuth2 (PKCE) per client org, scheduled sync into one cross-org model, overdue invoices, payroll risk, client health scores, practice dashboard and .xlsx month-end packs. Tokens encrypted at rest; financial data in memory only.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Paris Piotis",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ppiotis/xero-aggregator-mcp"
+  },
+  "homepage": "https://github.com/ppiotis/xero-aggregator-mcp#readme",
+  "keywords": [
+    "mcp",
+    "xero",
+    "accounting",
+    "accountants",
+    "bookkeeping",
+    "month-end",
+    "grok-bot",
+    "cursor-plugin"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "xero-aggregator-mcp": "dist/stdio.js",
+    "xero-aggregator-mcp-http": "dist/serve-http.js"
+  },
+  "files": [
+    "dist",
+    "fixtures",
+    "skills",
+    ".mcp.json",
+    "plugin.json",
+    ".cursor-plugin",
+    "logo.svg"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/stdio.js",
+    "start:http": "node dist/serve-http.js",
+    "test": "npm run build && vitest run",
+    "typecheck": "tsc --noEmit",
+    "fixtures": "node fixtures/generate.mjs",
+    "test:integration": "npm run build && vitest run test/integration.xero.test.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "exceljs": "^4.4.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.4"
+  },
+  "overrides": {
+    "uuid": "^11.1.1"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "Reports": [
+    {
+      "ReportID": "BankSummary",
+      "ReportName": "Bank Summary",
+      "ReportType": "BankSummary",
+      "ReportTitles": [
+        "Bank Summary",
+        "Northwind Joinery Ltd",
+        "1 September 2026 to 30 September 2026"
+      ],
+      "ReportDate": "30 September 2026",
+      "Rows": [
+        {
+          "RowType": "Header",
+          "Cells": [
+            {
+              "Value": "Bank Accounts"
+            },
+            {
+              "Value": "Opening Balance"
+            },
+            {
+              "Value": "Cash Received"
+            },
+            {
+              "Value": "Cash Spent"
+            },
+            {
+              "Value": "Closing Balance"
+            }
+          ]
+        },
+        {
+          "RowType": "Section",
+          "Title": "",
+          "Rows": [
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Business Current Account",
+                  "Attributes": [
+                    {
+                      "Value": "bbbb0001-0000-4000-8000-000000000001",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": "9812.40"
+                },
+                {
+                  "Value": "23300.00"
+                },
+                {
+                  "Value": "25900.00"
+                },
+                {
+                  "Value": "7212.40"
+                }
+              ]
+            },
+            {
+              "RowType": "SummaryRow",
+              "Cells": [
+                {
+                  "Value": "Total"
+                },
+                {
+                  "Value": "9812.40"
+                },
+                {
+                  "Value": "23300.00"
+                },
+                {
+                  "Value": "25900.00"
+                },
+                {
+                  "Value": "7212.40"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

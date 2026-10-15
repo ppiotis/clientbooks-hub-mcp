@@ -1,0 +1,194 @@
+{
+  "Invoices": [
+    {
+      "Type": "ACCREC",
+      "InvoiceID": "10000-0000-4000-8000-000000000008",
+      "InvoiceNumber": "INV-A001",
+      "Reference": "",
+      "Status": "AUTHORISED",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-8000-000000000001",
+        "Name": "Café Lumen"
+      },
+      "Date": "/Date(1787270400000+0000)/",
+      "DateString": "2026-08-21T00:00:00",
+      "DueDate": "/Date(1789862400000+0000)/",
+      "DueDateString": "2026-09-20T00:00:00",
+      "CurrencyCode": "GBP",
+      "Total": 1200,
+      "AmountPaid": 0,
+      "AmountDue": 1200
+    },
+    {
+      "Type": "ACCREC",
+      "InvoiceID": "10000-0000-4000-8000-000000000009",
+      "InvoiceNumber": "INV-A002",
+      "Reference": "",
+      "Status": "AUTHORISED",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-8000-000000000002",
+        "Name": "Grand Hotel"
+      },
+      "Date": "/Date(1785024000000+0000)/",
+      "DateString": "2026-07-26T00:00:00",
+      "DueDate": "/Date(1787616000000+0000)/",
+      "DueDateString": "2026-08-25T00:00:00",
+      "CurrencyCode": "GBP",
+      "Total": 2450,
+      "AmountPaid": 0,
+      "AmountDue": 2450
+    },
+    {
+      "Type": "ACCREC",
+      "InvoiceID": "10000-0000-4000-8000-000000000010",
+      "InvoiceNumber": "INV-A003",
+      "Reference": "",
+      "Status": "AUTHORISED",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-8000-000000000003",
+        "Name": "Corner Deli"
+      },
+      "Date": "/Date(1781481600000+0000)/",
+      "DateString": "2026-06-15T00:00:00",
+      "DueDate": "/Date(1784073600000+0000)/",
+      "DueDateString": "2026-07-15T00:00:00",
+      "CurrencyCode": "GBP",
+      "Total": 860,
+      "AmountPaid": 0,
+      "AmountDue": 860
+    },
+    {
+      "Type": "ACCREC",
+      "InvoiceID": "10000-0000-4000-8000-000000000011",
+      "InvoiceNumber": "INV-A004",
+      "Reference": "",
+      "Status": "AUTHORISED",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-8000-000000000004",
+        "Name": "Seaside Events"
+      },
+      "Date": "/Date(1789430400000+0000)/",
+      "DateString": "2026-09-15T00:00:00",
+      "DueDate": "/Date(1792022400000+0000)/",
+      "DueDateString": "2026-10-15T00:00:00",
+      "CurrencyCode": "GBP",
+      "Total": 3100,
+      "AmountPaid": 0,
+      "AmountDue": 3100
+    },
+    {
+      "Type": "ACCREC",
+      "InvoiceID": "10000-0000-4000-8000-000000000012",
+      "InvoiceNumber": "INV-A005",
+      "Reference": "",
+      "Status": "AUTHORISED",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-8000-000000000002",
+        "Name": "Grand Hotel"
+      },
+      "Date": "/Date(1787961600000+0000)/",
+      "DateString": "2026-08-29T00:00:00",
+      "DueDate": "/Date(1790553600000+0000)/",
+      "DueDateString": "2026-09-28T00:00:00",
+      "CurrencyCode": "GBP",
+      "Total": 540,
+      "AmountPaid": 0,
+      "AmountDue": 540
+    },
+    {
+      "Type": "ACCREC",
+      "InvoiceID": "10000-0000-4000-8000-000000000013",
+      "InvoiceNumber": "INV-A006",
+      "Reference": "",
+      "Status": "DRAFT",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-8000-000000000001",
+        "Name": "Café Lumen"
+      },
+      "Date": "/Date(1790640000000+0000)/",
+      "DateString": "2026-09-29T00:00:00",
+      "DueDate": "/Date(1793232000000+0000)/",
+      "DueDateString": "2026-10-29T00:00:00",
+      "CurrencyCode": "GBP",
+      "Total": 700,
+      "AmountPaid": 0,
+      "AmountDue": 700
+    },
+    {
+      "Type": "ACCREC",
+      "InvoiceID": "10000-0000-4000-8000-000000000014",
+      "InvoiceNumber": "INV-A007",
+      "Reference": "",
+      "Status": "PAID",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-8000-000000000003",
+        "Name": "Corner Deli"
+      },
+      "Date": "/Date(1777593600000+0000)/",
+      "DateString": "2026-05-01T00:00:00",
+      "DueDate": "/Date(1780185600000+0000)/",
+      "DueDateString": "2026-05-31T00:00:00",
+      "CurrencyCode": "GBP",
+      "Total": 300,
+      "AmountPaid": 300,
+      "AmountDue": 0
+    },
+    {
+      "Type": "ACCPAY",
+      "InvoiceID": "10000-0000-4000-8000-000000000015",
+      "InvoiceNumber": "FM-8812",
+      "Reference": "",
+      "Status": "AUTHORISED",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-8000-000000000005",
+        "Name": "Flour Mills Ltd"
+      },
+      "Date": "/Date(1788998400000+0000)/",
+      "DateString": "2026-09-10T00:00:00",
+      "DueDate": "/Date(1791590400000+0000)/",
+      "DueDateString": "2026-10-10T00:00:00",
+      "CurrencyCode": "GBP",
+      "Total": 1850,
+      "AmountPaid": 0,
+      "AmountDue": 1850
+    },
+    {
+      "Type": "ACCPAY",
+      "InvoiceID": "10000-0000-4000-8000-000000000016",
+      "InvoiceNumber": "PK-0441",
+      "Reference": "",
+      "Status": "AUTHORISED",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-8000-000000000006",
+        "Name": "Packaging Co"
+      },
+      "Date": "/Date(1790553600000+0000)/",
+      "DateString": "2026-09-28T00:00:00",
+      "DueDate": "/Date(1793145600000+0000)/",
+      "DueDateString": "2026-10-28T00:00:00",
+      "CurrencyCode": "GBP",
+      "Total": 420,
+      "AmountPaid": 0,
+      "AmountDue": 420
+    },
+    {
+      "Type": "ACCPAY",
+      "InvoiceID": "10000-0000-4000-8000-000000000017",
+      "InvoiceNumber": "VAT-Q3",
+      "Reference": "",
+      "Status": "AUTHORISED",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-8000-000000000007",
+        "Name": "HMRC"
+      },
+      "Date": "/Date(1790726400000+0000)/",
+      "DateString": "2026-09-30T00:00:00",
+      "DueDate": "/Date(1791331200000+0000)/",
+      "DueDateString": "2026-10-07T00:00:00",
+      "CurrencyCode": "GBP",
+      "Total": 2300,
+      "AmountPaid": 0,
+      "AmountDue": 2300
+    }
+  ]
+}

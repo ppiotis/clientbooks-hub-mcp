@@ -1,0 +1,12 @@
+{
+  "Organisations": [
+    {
+      "OrganisationID": "b2b2b2b2-0000-4000-8000-000000000002",
+      "Name": "Northwind Joinery Ltd",
+      "LegalName": "Northwind Joinery Ltd",
+      "BaseCurrency": "GBP",
+      "CountryCode": "GB",
+      "ShortCode": "!NWJ02"
+    }
+  ]
+}

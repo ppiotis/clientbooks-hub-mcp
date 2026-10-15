@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "xero-aggregator": {
+      "command": "npx",
+      "args": ["-y", "https://github.com/ppiotis/xero-aggregator-mcp/archive/refs/tags/v1.0.0.tar.gz"],
+      "env": { "XERO_AGG_DEMO": "1" }
+    }
+  }
+}

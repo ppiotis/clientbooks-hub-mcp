@@ -1,0 +1,53 @@
+{
+  "Contacts": [
+    {
+      "ContactID": "c0000-0000-4000-8000-000000000001",
+      "Name": "Café Lumen",
+      "ContactStatus": "ACTIVE",
+      "IsCustomer": true,
+      "IsSupplier": false
+    },
+    {
+      "ContactID": "c0000-0000-4000-8000-000000000002",
+      "Name": "Grand Hotel",
+      "ContactStatus": "ACTIVE",
+      "IsCustomer": true,
+      "IsSupplier": false
+    },
+    {
+      "ContactID": "c0000-0000-4000-8000-000000000003",
+      "Name": "Corner Deli",
+      "ContactStatus": "ACTIVE",
+      "IsCustomer": true,
+      "IsSupplier": false
+    },
+    {
+      "ContactID": "c0000-0000-4000-8000-000000000004",
+      "Name": "Seaside Events",
+      "ContactStatus": "ACTIVE",
+      "IsCustomer": true,
+      "IsSupplier": false
+    },
+    {
+      "ContactID": "c0000-0000-4000-8000-000000000005",
+      "Name": "Flour Mills Ltd",
+      "ContactStatus": "ACTIVE",
+      "IsCustomer": false,
+      "IsSupplier": true
+    },
+    {
+      "ContactID": "c0000-0000-4000-8000-000000000006",
+      "Name": "Packaging Co",
+      "ContactStatus": "ACTIVE",
+      "IsCustomer": false,
+      "IsSupplier": true
+    },
+    {
+      "ContactID": "c0000-0000-4000-8000-000000000007",
+      "Name": "HMRC",
+      "ContactStatus": "ACTIVE",
+      "IsCustomer": false,
+      "IsSupplier": true
+    }
+  ]
+}

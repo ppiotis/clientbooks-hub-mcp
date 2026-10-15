@@ -1,0 +1,267 @@
+{
+  "Reports": [
+    {
+      "ReportID": "ProfitAndLoss",
+      "ReportName": "Profit and Loss",
+      "ReportType": "ProfitAndLoss",
+      "ReportTitles": [
+        "Profit & Loss",
+        "Northwind Joinery Ltd",
+        "1 April 2026 to 30 September 2026"
+      ],
+      "ReportDate": "30 September 2026",
+      "Rows": [
+        {
+          "RowType": "Header",
+          "Cells": [
+            {
+              "Value": ""
+            },
+            {
+              "Value": "Sep 26"
+            },
+            {
+              "Value": "Aug 26"
+            },
+            {
+              "Value": "Jul 26"
+            },
+            {
+              "Value": "Jun 26"
+            },
+            {
+              "Value": "May 26"
+            },
+            {
+              "Value": "Apr 26"
+            }
+          ]
+        },
+        {
+          "RowType": "Section",
+          "Title": "Income",
+          "Rows": [
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Sales",
+                  "Attributes": [
+                    {
+                      "Value": "a0000-0000-4000-8000-000000000056",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": "23300.00"
+                },
+                {
+                  "Value": "24900.00"
+                },
+                {
+                  "Value": "26400.00"
+                },
+                {
+                  "Value": "27200.00"
+                },
+                {
+                  "Value": "29800.00"
+                },
+                {
+                  "Value": "31500.00"
+                }
+              ]
+            },
+            {
+              "RowType": "SummaryRow",
+              "Cells": [
+                {
+                  "Value": "Total Income"
+                },
+                {
+                  "Value": "23300.00"
+                },
+                {
+                  "Value": "24900.00"
+                },
+                {
+                  "Value": "26400.00"
+                },
+                {
+                  "Value": "27200.00"
+                },
+                {
+                  "Value": "29800.00"
+                },
+                {
+                  "Value": "31500.00"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "RowType": "Section",
+          "Title": "Less Operating Expenses",
+          "Rows": [
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Wages and Salaries",
+                  "Attributes": [
+                    {
+                      "Value": "a0000-0000-4000-8000-000000000057",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": "12000.00"
+                },
+                {
+                  "Value": "12000.00"
+                },
+                {
+                  "Value": "12000.00"
+                },
+                {
+                  "Value": "12000.00"
+                },
+                {
+                  "Value": "12000.00"
+                },
+                {
+                  "Value": "12000.00"
+                }
+              ]
+            },
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Materials",
+                  "Attributes": [
+                    {
+                      "Value": "a0000-0000-4000-8000-000000000058",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": "18100.00"
+                },
+                {
+                  "Value": "10700.00"
+                },
+                {
+                  "Value": "10600.00"
+                },
+                {
+                  "Value": "10300.00"
+                },
+                {
+                  "Value": "10800.00"
+                },
+                {
+                  "Value": "10500.00"
+                }
+              ]
+            },
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Rent",
+                  "Attributes": [
+                    {
+                      "Value": "a0000-0000-4000-8000-000000000059",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": "3500.00"
+                },
+                {
+                  "Value": "3500.00"
+                },
+                {
+                  "Value": "3500.00"
+                },
+                {
+                  "Value": "3500.00"
+                },
+                {
+                  "Value": "3500.00"
+                },
+                {
+                  "Value": "3500.00"
+                }
+              ]
+            },
+            {
+              "RowType": "SummaryRow",
+              "Cells": [
+                {
+                  "Value": "Total Operating Expenses"
+                },
+                {
+                  "Value": "33600.00"
+                },
+                {
+                  "Value": "26200.00"
+                },
+                {
+                  "Value": "26100.00"
+                },
+                {
+                  "Value": "25800.00"
+                },
+                {
+                  "Value": "26300.00"
+                },
+                {
+                  "Value": "26000.00"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "RowType": "Section",
+          "Title": "",
+          "Rows": [
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Net Profit"
+                },
+                {
+                  "Value": "-10300.00"
+                },
+                {
+                  "Value": "-1300.00"
+                },
+                {
+                  "Value": "300.00"
+                },
+                {
+                  "Value": "1400.00"
+                },
+                {
+                  "Value": "3500.00"
+                },
+                {
+                  "Value": "5500.00"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

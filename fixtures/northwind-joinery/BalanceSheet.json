@@ -1,0 +1,157 @@
+{
+  "Reports": [
+    {
+      "ReportID": "BalanceSheet",
+      "ReportName": "Balance Sheet",
+      "ReportType": "BalanceSheet",
+      "ReportTitles": [
+        "Balance Sheet",
+        "Northwind Joinery Ltd",
+        "As at 30 September 2026"
+      ],
+      "ReportDate": "30 September 2026",
+      "Rows": [
+        {
+          "RowType": "Header",
+          "Cells": [
+            {
+              "Value": ""
+            },
+            {
+              "Value": "Sep 26"
+            },
+            {
+              "Value": "Aug 26"
+            },
+            {
+              "Value": "Jul 26"
+            },
+            {
+              "Value": "Jun 26"
+            },
+            {
+              "Value": "May 26"
+            },
+            {
+              "Value": "Apr 26"
+            }
+          ]
+        },
+        {
+          "RowType": "Section",
+          "Title": "Bank",
+          "Rows": [
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Business Current Account",
+                  "Attributes": [
+                    {
+                      "Value": "a0000-0000-4000-8000-000000000060",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": "7212.40"
+                },
+                {
+                  "Value": "9812.40"
+                },
+                {
+                  "Value": "12600.00"
+                },
+                {
+                  "Value": "15900.00"
+                },
+                {
+                  "Value": "18800.00"
+                },
+                {
+                  "Value": "21450.00"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "RowType": "Section",
+          "Title": "Current Assets",
+          "Rows": [
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Director's Loan Account",
+                  "Attributes": [
+                    {
+                      "Value": "a0000-0000-4000-8000-000000000061",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": "14100.00"
+                },
+                {
+                  "Value": "10400.00"
+                },
+                {
+                  "Value": "7800.00"
+                },
+                {
+                  "Value": "5200.00"
+                },
+                {
+                  "Value": "3500.00"
+                },
+                {
+                  "Value": "2000.00"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "RowType": "Section",
+          "Title": "Current Liabilities",
+          "Rows": [
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "VAT",
+                  "Attributes": [
+                    {
+                      "Value": "a0000-0000-4000-8000-000000000062",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": "3100.00"
+                },
+                {
+                  "Value": "3300.00"
+                },
+                {
+                  "Value": "3400.00"
+                },
+                {
+                  "Value": "3550.00"
+                },
+                {
+                  "Value": "3800.00"
+                },
+                {
+                  "Value": "4000.00"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

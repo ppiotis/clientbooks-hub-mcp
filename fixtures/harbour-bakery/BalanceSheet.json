@@ -1,0 +1,183 @@
+{
+  "Reports": [
+    {
+      "ReportID": "BalanceSheet",
+      "ReportName": "Balance Sheet",
+      "ReportType": "BalanceSheet",
+      "ReportTitles": [
+        "Balance Sheet",
+        "Harbour Bakery Ltd",
+        "As at 30 September 2026"
+      ],
+      "ReportDate": "30 September 2026",
+      "Rows": [
+        {
+          "RowType": "Header",
+          "Cells": [
+            {
+              "Value": ""
+            },
+            {
+              "Value": "Sep 26"
+            },
+            {
+              "Value": "Aug 26"
+            },
+            {
+              "Value": "Jul 26"
+            },
+            {
+              "Value": "Jun 26"
+            },
+            {
+              "Value": "May 26"
+            },
+            {
+              "Value": "Apr 26"
+            }
+          ]
+        },
+        {
+          "RowType": "Section",
+          "Title": "Bank",
+          "Rows": [
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Business Current Account",
+                  "Attributes": [
+                    {
+                      "Value": "a0000-0000-4000-8000-000000000026",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": "18420.35"
+                },
+                {
+                  "Value": "16210.35"
+                },
+                {
+                  "Value": "15400.00"
+                },
+                {
+                  "Value": "14980.00"
+                },
+                {
+                  "Value": "14100.00"
+                },
+                {
+                  "Value": "13250.00"
+                }
+              ]
+            },
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Business Savings",
+                  "Attributes": [
+                    {
+                      "Value": "a0000-0000-4000-8000-000000000027",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": "10000.00"
+                },
+                {
+                  "Value": "10000.00"
+                },
+                {
+                  "Value": "10000.00"
+                },
+                {
+                  "Value": "10000.00"
+                },
+                {
+                  "Value": "10000.00"
+                },
+                {
+                  "Value": "10000.00"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "RowType": "Section",
+          "Title": "Current Liabilities",
+          "Rows": [
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Director's Loan Account",
+                  "Attributes": [
+                    {
+                      "Value": "a0000-0000-4000-8000-000000000028",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": "5000.00"
+                },
+                {
+                  "Value": "5000.00"
+                },
+                {
+                  "Value": "5000.00"
+                },
+                {
+                  "Value": "5000.00"
+                },
+                {
+                  "Value": "5000.00"
+                },
+                {
+                  "Value": "5000.00"
+                }
+              ]
+            },
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "VAT",
+                  "Attributes": [
+                    {
+                      "Value": "a0000-0000-4000-8000-000000000029",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": "2300.00"
+                },
+                {
+                  "Value": "2100.00"
+                },
+                {
+                  "Value": "1900.00"
+                },
+                {
+                  "Value": "2250.00"
+                },
+                {
+                  "Value": "2050.00"
+                },
+                {
+                  "Value": "1980.00"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

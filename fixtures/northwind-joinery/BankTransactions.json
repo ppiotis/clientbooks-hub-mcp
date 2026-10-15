@@ -1,0 +1,116 @@
+{
+  "BankTransactions": [
+    {
+      "BankTransactionID": "b0000-0000-4000-8000-000000000048",
+      "Type": "SPEND",
+      "Status": "AUTHORISED",
+      "IsReconciled": false,
+      "Date": "/Date(1788393600000+0000)/",
+      "DateString": "2026-09-03T00:00:00",
+      "Total": 1250,
+      "CurrencyCode": "GBP",
+      "BankAccount": {
+        "AccountID": "bbbb0001-0000-4000-8000-000000000001",
+        "Name": "Business Current Account"
+      }
+    },
+    {
+      "BankTransactionID": "b0000-0000-4000-8000-000000000049",
+      "Type": "RECEIVE",
+      "Status": "AUTHORISED",
+      "IsReconciled": false,
+      "Date": "/Date(1788652800000+0000)/",
+      "DateString": "2026-09-06T00:00:00",
+      "Total": 860,
+      "CurrencyCode": "GBP",
+      "BankAccount": {
+        "AccountID": "bbbb0001-0000-4000-8000-000000000001",
+        "Name": "Business Current Account"
+      }
+    },
+    {
+      "BankTransactionID": "b0000-0000-4000-8000-000000000050",
+      "Type": "SPEND",
+      "Status": "AUTHORISED",
+      "IsReconciled": false,
+      "Date": "/Date(1788912000000+0000)/",
+      "DateString": "2026-09-09T00:00:00",
+      "Total": 2400,
+      "CurrencyCode": "GBP",
+      "BankAccount": {
+        "AccountID": "bbbb0001-0000-4000-8000-000000000001",
+        "Name": "Business Current Account"
+      }
+    },
+    {
+      "BankTransactionID": "b0000-0000-4000-8000-000000000051",
+      "Type": "RECEIVE",
+      "Status": "AUTHORISED",
+      "IsReconciled": false,
+      "Date": "/Date(1789171200000+0000)/",
+      "DateString": "2026-09-12T00:00:00",
+      "Total": 75.25,
+      "CurrencyCode": "GBP",
+      "BankAccount": {
+        "AccountID": "bbbb0001-0000-4000-8000-000000000001",
+        "Name": "Business Current Account"
+      }
+    },
+    {
+      "BankTransactionID": "b0000-0000-4000-8000-000000000052",
+      "Type": "SPEND",
+      "Status": "AUTHORISED",
+      "IsReconciled": false,
+      "Date": "/Date(1789430400000+0000)/",
+      "DateString": "2026-09-15T00:00:00",
+      "Total": 310,
+      "CurrencyCode": "GBP",
+      "BankAccount": {
+        "AccountID": "bbbb0001-0000-4000-8000-000000000001",
+        "Name": "Business Current Account"
+      }
+    },
+    {
+      "BankTransactionID": "b0000-0000-4000-8000-000000000053",
+      "Type": "RECEIVE",
+      "Status": "AUTHORISED",
+      "IsReconciled": false,
+      "Date": "/Date(1789689600000+0000)/",
+      "DateString": "2026-09-18T00:00:00",
+      "Total": 1100,
+      "CurrencyCode": "GBP",
+      "BankAccount": {
+        "AccountID": "bbbb0001-0000-4000-8000-000000000001",
+        "Name": "Business Current Account"
+      }
+    },
+    {
+      "BankTransactionID": "b0000-0000-4000-8000-000000000054",
+      "Type": "SPEND",
+      "Status": "AUTHORISED",
+      "IsReconciled": false,
+      "Date": "/Date(1789948800000+0000)/",
+      "DateString": "2026-09-21T00:00:00",
+      "Total": 499.99,
+      "CurrencyCode": "GBP",
+      "BankAccount": {
+        "AccountID": "bbbb0001-0000-4000-8000-000000000001",
+        "Name": "Business Current Account"
+      }
+    },
+    {
+      "BankTransactionID": "b0000-0000-4000-8000-000000000055",
+      "Type": "SPEND",
+      "Status": "AUTHORISED",
+      "IsReconciled": true,
+      "Date": "/Date(1788393600000+0000)/",
+      "DateString": "2026-09-03T00:00:00",
+      "Total": 640,
+      "CurrencyCode": "GBP",
+      "BankAccount": {
+        "AccountID": "bbbb0001-0000-4000-8000-000000000001",
+        "Name": "Business Current Account"
+      }
+    }
+  ]
+}

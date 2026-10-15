@@ -1,0 +1,267 @@
+{
+  "Reports": [
+    {
+      "ReportID": "ProfitAndLoss",
+      "ReportName": "Profit and Loss",
+      "ReportType": "ProfitAndLoss",
+      "ReportTitles": [
+        "Profit & Loss",
+        "Harbour Bakery Ltd",
+        "1 April 2026 to 30 September 2026"
+      ],
+      "ReportDate": "30 September 2026",
+      "Rows": [
+        {
+          "RowType": "Header",
+          "Cells": [
+            {
+              "Value": ""
+            },
+            {
+              "Value": "Sep 26"
+            },
+            {
+              "Value": "Aug 26"
+            },
+            {
+              "Value": "Jul 26"
+            },
+            {
+              "Value": "Jun 26"
+            },
+            {
+              "Value": "May 26"
+            },
+            {
+              "Value": "Apr 26"
+            }
+          ]
+        },
+        {
+          "RowType": "Section",
+          "Title": "Income",
+          "Rows": [
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Sales",
+                  "Attributes": [
+                    {
+                      "Value": "a0000-0000-4000-8000-000000000022",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": "23650.00"
+                },
+                {
+                  "Value": "24050.00"
+                },
+                {
+                  "Value": "22800.00"
+                },
+                {
+                  "Value": "23100.00"
+                },
+                {
+                  "Value": "22400.00"
+                },
+                {
+                  "Value": "21000.00"
+                }
+              ]
+            },
+            {
+              "RowType": "SummaryRow",
+              "Cells": [
+                {
+                  "Value": "Total Income"
+                },
+                {
+                  "Value": "23650.00"
+                },
+                {
+                  "Value": "24050.00"
+                },
+                {
+                  "Value": "22800.00"
+                },
+                {
+                  "Value": "23100.00"
+                },
+                {
+                  "Value": "22400.00"
+                },
+                {
+                  "Value": "21000.00"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "RowType": "Section",
+          "Title": "Less Operating Expenses",
+          "Rows": [
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Wages and Salaries",
+                  "Attributes": [
+                    {
+                      "Value": "a0000-0000-4000-8000-000000000023",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": "9000.00"
+                },
+                {
+                  "Value": "9000.00"
+                },
+                {
+                  "Value": "9000.00"
+                },
+                {
+                  "Value": "9000.00"
+                },
+                {
+                  "Value": "9000.00"
+                },
+                {
+                  "Value": "9000.00"
+                }
+              ]
+            },
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Cost of Ingredients",
+                  "Attributes": [
+                    {
+                      "Value": "a0000-0000-4000-8000-000000000024",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": "5300.00"
+                },
+                {
+                  "Value": "5250.00"
+                },
+                {
+                  "Value": "5400.00"
+                },
+                {
+                  "Value": "5100.00"
+                },
+                {
+                  "Value": "5350.00"
+                },
+                {
+                  "Value": "5200.00"
+                }
+              ]
+            },
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Rent",
+                  "Attributes": [
+                    {
+                      "Value": "a0000-0000-4000-8000-000000000025",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": "2000.00"
+                },
+                {
+                  "Value": "2000.00"
+                },
+                {
+                  "Value": "2000.00"
+                },
+                {
+                  "Value": "2000.00"
+                },
+                {
+                  "Value": "2000.00"
+                },
+                {
+                  "Value": "2000.00"
+                }
+              ]
+            },
+            {
+              "RowType": "SummaryRow",
+              "Cells": [
+                {
+                  "Value": "Total Operating Expenses"
+                },
+                {
+                  "Value": "16300.00"
+                },
+                {
+                  "Value": "16250.00"
+                },
+                {
+                  "Value": "16400.00"
+                },
+                {
+                  "Value": "16100.00"
+                },
+                {
+                  "Value": "16350.00"
+                },
+                {
+                  "Value": "16200.00"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "RowType": "Section",
+          "Title": "",
+          "Rows": [
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Net Profit"
+                },
+                {
+                  "Value": "7350.00"
+                },
+                {
+                  "Value": "7800.00"
+                },
+                {
+                  "Value": "6400.00"
+                },
+                {
+                  "Value": "7000.00"
+                },
+                {
+                  "Value": "6050.00"
+                },
+                {
+                  "Value": "4800.00"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

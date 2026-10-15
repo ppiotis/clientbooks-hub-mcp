@@ -1,0 +1,53 @@
+{
+  "Contacts": [
+    {
+      "ContactID": "c0000-0000-4000-8000-000000000030",
+      "Name": "Oakridge Homes",
+      "ContactStatus": "ACTIVE",
+      "IsCustomer": true,
+      "IsSupplier": false
+    },
+    {
+      "ContactID": "c0000-0000-4000-8000-000000000031",
+      "Name": "Patel Developments",
+      "ContactStatus": "ACTIVE",
+      "IsCustomer": true,
+      "IsSupplier": false
+    },
+    {
+      "ContactID": "c0000-0000-4000-8000-000000000032",
+      "Name": "Kestrel Interiors",
+      "ContactStatus": "ACTIVE",
+      "IsCustomer": true,
+      "IsSupplier": false
+    },
+    {
+      "ContactID": "c0000-0000-4000-8000-000000000033",
+      "Name": "Timber Supplies Ltd",
+      "ContactStatus": "ACTIVE",
+      "IsCustomer": false,
+      "IsSupplier": true
+    },
+    {
+      "ContactID": "c0000-0000-4000-8000-000000000034",
+      "Name": "ToolHire Direct",
+      "ContactStatus": "ACTIVE",
+      "IsCustomer": false,
+      "IsSupplier": true
+    },
+    {
+      "ContactID": "c0000-0000-4000-8000-000000000035",
+      "Name": "HMRC",
+      "ContactStatus": "ACTIVE",
+      "IsCustomer": false,
+      "IsSupplier": true
+    },
+    {
+      "ContactID": "c0000-0000-4000-8000-000000000036",
+      "Name": "Van Lease Co",
+      "ContactStatus": "ACTIVE",
+      "IsCustomer": false,
+      "IsSupplier": true
+    }
+  ]
+}

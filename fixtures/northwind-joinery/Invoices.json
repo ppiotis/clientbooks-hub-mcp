@@ -1,0 +1,213 @@
+{
+  "Invoices": [
+    {
+      "Type": "ACCREC",
+      "InvoiceID": "10000-0000-4000-8000-000000000037",
+      "InvoiceNumber": "INV-B101",
+      "Reference": "",
+      "Status": "AUTHORISED",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-8000-000000000030",
+        "Name": "Oakridge Homes"
+      },
+      "Date": "/Date(1778457600000+0000)/",
+      "DateString": "2026-05-11T00:00:00",
+      "DueDate": "/Date(1781049600000+0000)/",
+      "DueDateString": "2026-06-10T00:00:00",
+      "CurrencyCode": "GBP",
+      "Total": 8800,
+      "AmountPaid": 2000,
+      "AmountDue": 6800
+    },
+    {
+      "Type": "ACCREC",
+      "InvoiceID": "10000-0000-4000-8000-000000000038",
+      "InvoiceNumber": "INV-B102",
+      "Reference": "",
+      "Status": "AUTHORISED",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-8000-000000000031",
+        "Name": "Patel Developments"
+      },
+      "Date": "/Date(1780012800000+0000)/",
+      "DateString": "2026-05-29T00:00:00",
+      "DueDate": "/Date(1782604800000+0000)/",
+      "DueDateString": "2026-06-28T00:00:00",
+      "CurrencyCode": "GBP",
+      "Total": 4250,
+      "AmountPaid": 0,
+      "AmountDue": 4250
+    },
+    {
+      "Type": "ACCREC",
+      "InvoiceID": "10000-0000-4000-8000-000000000039",
+      "InvoiceNumber": "INV-B103",
+      "Reference": "",
+      "Status": "AUTHORISED",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-8000-000000000030",
+        "Name": "Oakridge Homes"
+      },
+      "Date": "/Date(1781913600000+0000)/",
+      "DateString": "2026-06-20T00:00:00",
+      "DueDate": "/Date(1784505600000+0000)/",
+      "DueDateString": "2026-07-20T00:00:00",
+      "CurrencyCode": "GBP",
+      "Total": 3900,
+      "AmountPaid": 0,
+      "AmountDue": 3900
+    },
+    {
+      "Type": "ACCREC",
+      "InvoiceID": "10000-0000-4000-8000-000000000040",
+      "InvoiceNumber": "INV-B104",
+      "Reference": "",
+      "Status": "AUTHORISED",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-8000-000000000032",
+        "Name": "Kestrel Interiors"
+      },
+      "Date": "/Date(1784592000000+0000)/",
+      "DateString": "2026-07-21T00:00:00",
+      "DueDate": "/Date(1787184000000+0000)/",
+      "DueDateString": "2026-08-20T00:00:00",
+      "CurrencyCode": "GBP",
+      "Total": 2175.5,
+      "AmountPaid": 0,
+      "AmountDue": 2175.5
+    },
+    {
+      "Type": "ACCREC",
+      "InvoiceID": "10000-0000-4000-8000-000000000041",
+      "InvoiceNumber": "INV-B105",
+      "Reference": "",
+      "Status": "AUTHORISED",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-8000-000000000031",
+        "Name": "Patel Developments"
+      },
+      "Date": "/Date(1787702400000+0000)/",
+      "DateString": "2026-08-26T00:00:00",
+      "DueDate": "/Date(1790294400000+0000)/",
+      "DueDateString": "2026-09-25T00:00:00",
+      "CurrencyCode": "GBP",
+      "Total": 1480,
+      "AmountPaid": 0,
+      "AmountDue": 1480
+    },
+    {
+      "Type": "ACCREC",
+      "InvoiceID": "10000-0000-4000-8000-000000000042",
+      "InvoiceNumber": "INV-B106",
+      "Reference": "",
+      "Status": "AUTHORISED",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-8000-000000000032",
+        "Name": "Kestrel Interiors"
+      },
+      "Date": "/Date(1789862400000+0000)/",
+      "DateString": "2026-09-20T00:00:00",
+      "DueDate": "/Date(1792454400000+0000)/",
+      "DueDateString": "2026-10-20T00:00:00",
+      "CurrencyCode": "GBP",
+      "Total": 2600,
+      "AmountPaid": 0,
+      "AmountDue": 2600
+    },
+    {
+      "Type": "ACCREC",
+      "InvoiceID": "10000-0000-4000-8000-000000000043",
+      "InvoiceNumber": "INV-B107",
+      "Reference": "",
+      "Status": "VOIDED",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-8000-000000000030",
+        "Name": "Oakridge Homes"
+      },
+      "Date": "/Date(1775088000000+0000)/",
+      "DateString": "2026-04-02T00:00:00",
+      "DueDate": "/Date(1777680000000+0000)/",
+      "DueDateString": "2026-05-02T00:00:00",
+      "CurrencyCode": "GBP",
+      "Total": 1500,
+      "AmountPaid": 0,
+      "AmountDue": 1500
+    },
+    {
+      "Type": "ACCPAY",
+      "InvoiceID": "10000-0000-4000-8000-000000000044",
+      "InvoiceNumber": "TS-5520",
+      "Reference": "",
+      "Status": "AUTHORISED",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-8000-000000000033",
+        "Name": "Timber Supplies Ltd"
+      },
+      "Date": "/Date(1786838400000+0000)/",
+      "DateString": "2026-08-16T00:00:00",
+      "DueDate": "/Date(1789430400000+0000)/",
+      "DueDateString": "2026-09-15T00:00:00",
+      "CurrencyCode": "GBP",
+      "Total": 5400,
+      "AmountPaid": 0,
+      "AmountDue": 5400
+    },
+    {
+      "Type": "ACCPAY",
+      "InvoiceID": "10000-0000-4000-8000-000000000045",
+      "InvoiceNumber": "TH-0193",
+      "Reference": "",
+      "Status": "AUTHORISED",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-8000-000000000034",
+        "Name": "ToolHire Direct"
+      },
+      "Date": "/Date(1789171200000+0000)/",
+      "DateString": "2026-09-12T00:00:00",
+      "DueDate": "/Date(1791763200000+0000)/",
+      "DueDateString": "2026-10-12T00:00:00",
+      "CurrencyCode": "GBP",
+      "Total": 980,
+      "AmountPaid": 0,
+      "AmountDue": 980
+    },
+    {
+      "Type": "ACCPAY",
+      "InvoiceID": "10000-0000-4000-8000-000000000046",
+      "InvoiceNumber": "PAYE-09",
+      "Reference": "",
+      "Status": "AUTHORISED",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-8000-000000000035",
+        "Name": "HMRC"
+      },
+      "Date": "/Date(1790726400000+0000)/",
+      "DateString": "2026-09-30T00:00:00",
+      "DueDate": "/Date(1792627200000+0000)/",
+      "DueDateString": "2026-10-22T00:00:00",
+      "CurrencyCode": "GBP",
+      "Total": 3150,
+      "AmountPaid": 0,
+      "AmountDue": 3150
+    },
+    {
+      "Type": "ACCPAY",
+      "InvoiceID": "10000-0000-4000-8000-000000000047",
+      "InvoiceNumber": "VL-1105",
+      "Reference": "",
+      "Status": "AUTHORISED",
+      "Contact": {
+        "ContactID": "c0000-0000-4000-8000-000000000036",
+        "Name": "Van Lease Co"
+      },
+      "Date": "/Date(1790812800000+0000)/",
+      "DateString": "2026-10-01T00:00:00",
+      "DueDate": "/Date(1793836800000+0000)/",
+      "DueDateString": "2026-11-05T00:00:00",
+      "CurrencyCode": "GBP",
+      "Total": 650,
+      "AmountPaid": 0,
+      "AmountDue": 650
+    }
+  ]
+}

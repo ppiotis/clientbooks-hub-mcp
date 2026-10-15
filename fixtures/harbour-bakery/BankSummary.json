@@ -1,0 +1,115 @@
+{
+  "Reports": [
+    {
+      "ReportID": "BankSummary",
+      "ReportName": "Bank Summary",
+      "ReportType": "BankSummary",
+      "ReportTitles": [
+        "Bank Summary",
+        "Harbour Bakery Ltd",
+        "1 September 2026 to 30 September 2026"
+      ],
+      "ReportDate": "30 September 2026",
+      "Rows": [
+        {
+          "RowType": "Header",
+          "Cells": [
+            {
+              "Value": "Bank Accounts"
+            },
+            {
+              "Value": "Opening Balance"
+            },
+            {
+              "Value": "Cash Received"
+            },
+            {
+              "Value": "Cash Spent"
+            },
+            {
+              "Value": "Closing Balance"
+            }
+          ]
+        },
+        {
+          "RowType": "Section",
+          "Title": "",
+          "Rows": [
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Business Current Account",
+                  "Attributes": [
+                    {
+                      "Value": "aaaa0001-0000-4000-8000-000000000001",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": "16210.35"
+                },
+                {
+                  "Value": "23650.00"
+                },
+                {
+                  "Value": "21440.00"
+                },
+                {
+                  "Value": "18420.35"
+                }
+              ]
+            },
+            {
+              "RowType": "Row",
+              "Cells": [
+                {
+                  "Value": "Business Savings",
+                  "Attributes": [
+                    {
+                      "Value": "aaaa0002-0000-4000-8000-000000000002",
+                      "Id": "account"
+                    }
+                  ]
+                },
+                {
+                  "Value": "10000.00"
+                },
+                {
+                  "Value": "0.00"
+                },
+                {
+                  "Value": "0.00"
+                },
+                {
+                  "Value": "10000.00"
+                }
+              ]
+            },
+            {
+              "RowType": "SummaryRow",
+              "Cells": [
+                {
+                  "Value": "Total"
+                },
+                {
+                  "Value": "26210.35"
+                },
+                {
+                  "Value": "23650.00"
+                },
+                {
+                  "Value": "21440.00"
+                },
+                {
+                  "Value": "28420.35"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
