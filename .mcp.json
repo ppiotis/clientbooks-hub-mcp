@@ -1,8 +1,8 @@
 {
   "mcpServers": {
-    "xero-aggregator": {
+    "clientbooks-hub": {
       "command": "npx",
-      "args": ["-y", "https://github.com/ppiotis/xero-aggregator-mcp/archive/refs/tags/v1.0.0.tar.gz"],
+      "args": ["-y", "https://github.com/ppiotis/clientbooks-hub-mcp/archive/refs/tags/v1.1.0.tar.gz"],
       "env": { "XERO_AGG_DEMO": "1" }
     }
   }

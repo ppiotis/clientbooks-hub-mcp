@@ -6,7 +6,7 @@ import { health, overdueAcross, payrollRisk, practiceDashboard, trendingTrouble 
 import { writePack } from "./xlsx.js";
 import type { OrgSnapshot } from "./normalize.js";
 
-export const VERSION = "1.0.2";
+export const VERSION = "1.1.0";
 
 const RO = { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: true } as const;
 const asOf = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Use YYYY-MM-DD").optional().describe("Report date (YYYY-MM-DD). Defaults to today (demo mode: 2026-09-30).");
@@ -22,7 +22,7 @@ function resolveOrg(orgs: OrgSnapshot[], q: string): OrgSnapshot {
 }
 
 export function createServer(c: Context = getContext()): McpServer {
-  const server = new McpServer({ name: "xero-aggregator", version: VERSION });
+  const server = new McpServer({ name: "clientbooks-hub", version: VERSION });
   const { cfg, cache, oauth } = c;
 
   server.registerTool("connect_org_start", {

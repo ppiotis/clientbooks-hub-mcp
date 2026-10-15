@@ -1,15 +1,15 @@
 {
-  "name": "xero-aggregator-mcp",
-  "version": "1.0.2",
-  "description": "Multi-tenant Xero aggregator MCP server for accountants: read-only OAuth2 (PKCE) per client org, scheduled sync into one cross-org model, overdue invoices, payroll risk, client health scores, practice dashboard and .xlsx month-end packs. Tokens encrypted at rest; financial data in memory only.",
+  "name": "clientbooks-hub-mcp",
+  "version": "1.1.0",
+  "description": "ClientBooks Hub: multi-client MCP server for accountants, works with Xero: read-only OAuth2 (PKCE) per client org, scheduled sync into one cross-org model, overdue invoices, payroll risk, client health scores, practice dashboard and .xlsx month-end packs. Tokens encrypted at rest; financial data in memory only.",
   "type": "module",
   "license": "MIT",
   "author": "Paris Piotis",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ppiotis/xero-aggregator-mcp"
+    "url": "https://github.com/ppiotis/clientbooks-hub-mcp"
   },
-  "homepage": "https://github.com/ppiotis/xero-aggregator-mcp#readme",
+  "homepage": "https://github.com/ppiotis/clientbooks-hub-mcp#readme",
   "keywords": [
     "mcp",
     "xero",
@@ -24,8 +24,8 @@
     "node": ">=20"
   },
   "bin": {
-    "xero-aggregator-mcp": "dist/stdio.js",
-    "xero-aggregator-mcp-http": "dist/serve-http.js"
+    "clientbooks-hub-mcp": "dist/stdio.js",
+    "clientbooks-hub-mcp-http": "dist/serve-http.js"
   },
   "files": [
     "dist",

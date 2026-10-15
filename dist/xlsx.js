@@ -9,7 +9,7 @@ export function slug(s) { return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").rep
 /** Builds the 3-sheet month-end pack. Returns the workbook plus the totals written, for verification. */
 export function buildPack(o) {
     const wb = new ExcelJS.Workbook();
-    wb.creator = "xero-aggregator-mcp";
+    wb.creator = "clientbooks-hub-mcp";
     wb.created = new Date(o.asOf + "T00:00:00Z");
     const title = (ws, t) => {
         ws.addRow([`${o.name}: ${t}`]).font = { bold: true, size: 14 };

@@ -1,6 +1,6 @@
 ---
 name: month-end-pack
-description: Produce and explain a client's Excel month-end pack (aged receivables, bank reconciliation status, P&L snapshot) with xero-aggregator. Use when the accountant asks for a month-end pack, client pack, or an Excel export for a client.
+description: Produce and explain a client's Excel month-end pack (aged receivables, bank reconciliation status, P&L snapshot) with ClientBooks Hub. Use when the accountant asks for a month-end pack, client pack, or an Excel export for a client.
 ---
 
 # Month-end pack

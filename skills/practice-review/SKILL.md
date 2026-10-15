@@ -1,6 +1,6 @@
 ---
 name: practice-review
-description: Run a cross-client practice review for an accountant using xero-aggregator - overdue invoices, payroll risk, client health and practice dashboard. Use for questions like "who owes money across my clients", "who might miss payroll", "which clients are in trouble", "practice revenue / DSO".
+description: Run a cross-client practice review for an accountant using ClientBooks Hub - overdue invoices, payroll risk, client health and practice dashboard. Use for questions like "who owes money across my clients", "who might miss payroll", "which clients are in trouble", "practice revenue / DSO".
 ---
 
 # Practice review across all clients
